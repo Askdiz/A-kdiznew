@@ -3,7 +3,7 @@
         "id": 1,
         "title": "حلم اشرف",
         "titleEn": "Eşref'in rüyası",
-        "image": "https://3esk.onl/wp-content/uploads/2025/09/esref-ruya-2.jpg",
+        "image": "https://wulaopnlopmcwfdritjj.supabase.co/storage/v1/object/public/images/2253b6c9-dc6e-4aed-881b-2e787bafd0b2/1763496970491_b3rzrb.png",
         "description": "انضم أشرف إلى المافيا وأصبح أحد أقوى رجالها، بينما يواصل بحثه لسنوات عن فتاة حلم بها وأسماها رؤيا. يقع في حب نيسان، دون أن يدرك أنها هي نفسها رؤيا، وأنها تعمل سراً كمخبرة للشرطة، ليجد نفسه عالقًا بين الحب والخيانة والصراع...",
         "episodes": ["AE7PZDK1", "AE7PZDK1", "v3l9494", "v3l94b8"],
         "rumbleEpisodes": ["v6z5ujg", "AE7PZDK1", "v9a2b3c", "v4d5e6f"],
@@ -21,7 +21,7 @@
         "id": 2,
         "title": "الحب لا يفهم الكلام",
         "titleEn": "Aşk Laftan Anlamaz",
-        "image": "https://3esk.onl/wp-content/uploads/2025/09/ask-laftan-anlamaz-poster.jpg",
+        "image": "https://wulaopnlopmcwfdritjj.supabase.co/storage/v1/object/public/images/2253b6c9-dc6e-4aed-881b-2e787bafd0b2/1763496852723_wudcyb.png",
         "description": "القصة تدور حول حياة، فتاة جميلة ومرحة تنتقل من الريف إلى اسطنبول وتبحث عن عمل في أقل من 24 ساعة لكي لا تجبرها عائلتها على العودة إلى القرية. وخلال بحثها تجد نفسها في صراع مع رئيسها (مراد) الوسيم لكنهما يقعان في الحب وتتوالى الأحداث الشيقة.",
         "episodes": ["v3l908a", "AE7PZDK1"],
         "episodeDetails": [
@@ -36,7 +36,7 @@
         "id": 3,
         "title": "ورود ودنوب",
         "titleEn": "Güller ve günahlar",
-        "image": "https://3esk.onl/wp-content/uploads/2025/09/guller-ve-gunahlar-1.jpg",
+        "image": "https://wulaopnlopmcwfdritjj.supabase.co/storage/v1/object/public/images/2253b6c9-dc6e-4aed-881b-2e787bafd0b2/1763497308667_znzamn.png",
         "description": "القصة تدور حول الفتاة الجميلة صانم (ديميت أوزديمير) التي تعمل في متجر بقالة والدها وتضطر للبحث عن عمل بعدما وضع والدها حداً لعملها في البقالة، لتعمل في وكالة إعلانات حيث تلتقي بـ جان (جان يامان) المصور المشهور والمتهور، ويقعان في علاقة حب كوميدية مليئة بالمغامرات.",
         "episodes": ["v3l97u6", "v3l983a", "v3l98b4"],
         "episodeDetails": [
@@ -44,15 +44,15 @@
             "الحلقة 2: كذبة صغيرة. تقع صانم في كذبة صغيرة للحفاظ على وظيفتها.",
             "الحلقة 3: ليلة الأوبرا. يقضي جان وصانم ليلة مليئة بالأحداث الغريبة في الأوبرا."
         ],
-        "year": 2018,
+        "year": 2025,
         "trailerId": "v3l98v6",
-        "isNew": false
+        "isNew": true
     },
     {
         "id": 4,
         "title": "المحتالون",
         "titleEn": "dolandırıcılar",
-        "image": "https://3esk.onl/wp-content/uploads/2025/10/Muhtaloun-long-isimsiz.jpg",
+        "image": "https://wulaopnlopmcwfdritjj.supabase.co/storage/v1/object/public/images/2253b6c9-dc6e-4aed-881b-2e787bafd0b2/1763497410968_q503zn.png",
         "description": "مسلسل تاريخي تركي يروي قصة الغازي أرطغرل، والد عثمان الأول مؤسس الدولة العثمانية. يعرض المسلسل رحلة أرطغرل في البحث عن وطن لقبيلته، ويصوّر صراعه مع الخونة والصليبيين والمغول. ملحمة تاريخية ضخمة تظهر قيم الشجاعة والعدالة...",
         "episodes": ["v3la0a4", "v3la0f2", "v3la0k8", "v3la0q4", "v3la0v2"],
         "episodeDetails": [
@@ -62,16 +62,16 @@
             "الحلقة 4: طريق الهجرة. يبدأ أرطغرل رحلة البحث عن أرض جديدة.",
             "الحلقة 5: المؤسس. يضع أرطغرل اللبنة الأولى للدولة."
         ],
-        "year": 2014,
+        "year": 2025,
         "trailerId": "v3la1i8",
-        "isNew": false
+        "isNew": true
     },
     {
         "id": 5,
-        "title": "الخليفة: نداء الجذور",
-        "titleEn": "Halef: Köklerin Çağrısı",
-        "image": "https://placeholder.com/image/halef.jpg",
-        "description": "مسلسل درامي تركي عُرض لأول مرة في سبتمبر 2025، من بطولة إلهان شان وأيبوكي بوسات وبيران داملا يلماز.",
+        "title": "مرعشلي",
+        "titleEn": "مرعشلي",
+        "image": "https://wulaopnlopmcwfdritjj.supabase.co/storage/v1/object/public/images/2253b6c9-dc6e-4aed-881b-2e787bafd0b2/1763497590858_gn9jnr.png",
+        "description": "ويحكي المسلسل قصة جندي سابق من.كهرمان مرعش. ترك عمله في القوات الخاصة، واتجه لقضاء حياته في متجر للكتب المستعملة. وكانت نقطة تحول حياة المرعشلي الشجاع والجريء بعد إصابة ابنته.زيليش. بطلق ناري، ليصبح هدفه الوحيد بعد ذلك إعادة ابنته المريضة للحياة.",
         "episodes": ["v3lB101", "v3lB102"],
         "episodeDetails": [
             "الحلقة 1: الانطلاق. تبدأ رحلة كشف الأسرار والجذور.",
@@ -83,10 +83,10 @@
     },
     {
         "id": 6,
-        "title": "الغرفة المزدوجة",
-        "titleEn": "Çifte Oda",
-        "image": "https://placeholder.com/image/cifteoda.jpg",
-        "description": "مسلسل صيفي رومانسي كوميدي مقتبس عن المسلسل الكوري 'كينج ذا لاند'، يجمع بين الرومانسية والكوميديا.",
+        "title": "شخص آخر",
+        "titleEn": "başka bir kiş",
+        "image": "https://wulaopnlopmcwfdritjj.supabase.co/storage/v1/object/public/images/2253b6c9-dc6e-4aed-881b-2e787bafd0b2/1763497716826_jhxvcn.png",
+        "description": "ليلى غيديز ، المدعية العائدة حديثاً إلى إسطنبول، تتولى قضية جريمة هزت تركيا. تتعاون مع كينان أوزتورك، مقدم الأخبار الشهير ، وسرعان ما ينشأ بينهما جاذبية، لكنهما يجهلان مدى قرب القاتل اليهما. الجريمة تكشف دوافعها، ويتساءل الناس هل القاتل جانيًا أم بطلاً، مما يضع تحالف ليلى وكينان وعلاقتهما في اختبار",
         "episodes": ["v3lC201", "v3lC202"],
         "episodeDetails": [
             "الحلقة 1: أول لقاء. تبدأ المواقف الكوميدية بين البطلين.",
@@ -98,10 +98,10 @@
     },
     {
         "id": 7,
-        "title": "ميرا وسليم",
-        "titleEn": "Meyra ve Selim",
-        "image": "https://placeholder.com/image/meyraselim.jpg",
-        "description": "مسلسل درامي رومانسي، وهو نسخة تركية من الدراما الكورية الشهيرة 'ملكة الدموع'. يحكي قصة وريثة غنية تعمل متخفية وتقع في حب محامٍ.",
+        "title": "أنت اطرق بابي",
+        "titleEn": "Kapımı çal",
+        "image": "https://wulaopnlopmcwfdritjj.supabase.co/storage/v1/object/public/images/2253b6c9-dc6e-4aed-881b-2e787bafd0b2/1763497886420_p9zds.png",
+        "description": "ايدا التي تعلق كل آمالها في الحياة بتعليمها، تواجه سيركان بولات الذي يقطع منحتها الى خارج البلد و يتسبب ببقائها خريجة ثانوية فحسب. سيركان يعرض على ايدا ارجاع منحتها لها في حال تظاهرت بخطوبتها له لمدة شهرين. في البداية ترفض ايدا عرض هذا الرجل الذي تكرهه، و لكنها تضطر للقبول عندما تتغير ظروفها. بينما يتظاهر سيركان و ايدا بأنهما مخطوبان، يدخلان في علاقة شغوفة و صعبة تنسيهما كل ما يعرفان عن الصواب!",
         "episodes": ["v3lD301", "v3lD302"],
         "episodeDetails": [
             "الحلقة 1: الهوية المخفية. عودة ميرا من أمريكا وبداية عملها السري.",
@@ -113,10 +113,10 @@
     },
     {
         "id": 8,
-        "title": "الغريب الذي في المرآة",
-        "titleEn": "Aynadaki Yabancı",
-        "image": "https://placeholder.com/image/aynadakiyabanci.jpg",
-        "description": "دراما تحكي عن رجل غامض يدخل حياة امرأة وتتقاطع مصائرهما بطريقة تغير حياتها، وتكشف جوانب مظلمة في ماضيها.",
+        "title": "المدينة البعيدة",
+        "titleEn": "Uzak şehir",
+        "image": "https://wulaopnlopmcwfdritjj.supabase.co/storage/v1/object/public/images/2253b6c9-dc6e-4aed-881b-2e787bafd0b2/1763498118272_ya1obj.png",
+        "description": "تأتي عليا ألبورا من كندا إلى ماردين مع ابنها ذي الخمس سنوات وجثمان زوجها لتنفيذ وصيته، لكنها تجد نفسها محاصرة في أراضي عائلة ألبورا دون إمكانية المغادرة. تواجه عليا صراعات مع عائلة زوجها وسط النزاعات العشائرية والتعصب الإقطاعي، محاولةً كشف أسرار الماضي وإنقاذ ابنها في الوقت نفسه.",
         "episodes": ["v3lE401", "v3lE402"],
         "episodeDetails": [
             "الحلقة 1: المدخل الغامض. ظهور الرجل الغريب في حياة البطلة.",
@@ -128,10 +128,10 @@
     },
     {
         "id": 9,
-        "title": "الاراضي الغاضبة",
-        "titleEn": "Kızgın Topraklar",
-        "image": "https://placeholder.com/image/kizgintopraklar.jpg",
-        "description": "دراما تدور حول 'أيلول' التي تخلت عن أحلامها من أجل الحب، و 'رأس' الذي حارب عائلته لأجلها، ويواجهان قوى قاسية من الماضي.",
+        "title": "المنضمة",
+        "titleEn": "TeşkiLat",
+        "image": "https://wulaopnlopmcwfdritjj.supabase.co/storage/v1/object/public/images/2253b6c9-dc6e-4aed-881b-2e787bafd0b2/1763498402652_wc3lw.png",
+        "description": "ينفذ هجوم ارهابي في مصنع للطائرات في أنقرة. بعد هذا الهجوم، يتم تأسيس فريق سري للغاية في منظمة الاستخبارات الوطنية. سيتخلى أعضاء هذا الفريق عن حياتهم من أجل بلدهم في محاولة لتحديد الجهة المسؤولة عن هذه الهجمات.",
         "episodes": ["v3lF501"],
         "episodeDetails": [
             "الحلقة 1: ضريبة الحب. المواجهة الأولى مع ماضي العائلتين."
@@ -142,10 +142,10 @@
     },
     {
         "id": 10,
-        "title": "كان يا مكان في إسطنبول",
-        "titleEn": "Bir Zamanlar İstanbul",
-        "image": "https://placeholder.com/image/birzamanlar.jpg",
-        "description": "قصة تتقاطع فيها طرق بطل يسعى للعدالة مع صحفية شجاعة. يدور العمل حول تساؤل: هل المجتمع أم الاختيار الشخصي هو ما يدفع الإنسان للجريمة؟",
+        "title": "ليلى",
+        "titleEn": "Leyla",
+        "image": "https://wulaopnlopmcwfdritjj.supabase.co/storage/v1/object/public/images/2253b6c9-dc6e-4aed-881b-2e787bafd0b2/1763498531898_r1mq2v.png",
+        "description": "يتناول المسلسل قصة ليلى، فتاة يتيمة الأم تعاني من قسوة زوجة أبيها التي تتركها في مكب للنفايات. تعود ليلى بعد سنوات للانتقام، لتجد نفسها في صراع بين رغبتها في الثأر واختبارها بالحب في رحلة عاطفية مليئة بالتحديات.",
         "episodes": ["v3lG601"],
         "episodeDetails": [
             "الحلقة 1: البحث عن العدالة. لقاء البطل والصحفية وبداية رحلة النضال."

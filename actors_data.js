@@ -3,92 +3,610 @@
 // قاعدة بيانات الممثلين
 const actorsData = [
     {
-        id: "ahmet_yilmaz",
-        name: "أحمد يilmاز",
-        nameEn: "Ahmet Yılmaz",
-        image: "https://via.placeholder.com/200x200/4a90e2/ffffff?text=أحمد+يلماز",
-        bio: "ممثل تركي مشهور بأدواره الدرامية القوية",
+        id: "Çağatay_Ulusoy",
+        name: "شتاي أولساي",
+        nameEn: "Çağatay Ulusoy",
+        image: "https://wulaopnlopmcwfdritjj.supabase.co/storage/v1/object/public/images/2253b6c9-dc6e-4aed-881b-2e787bafd0b2/1763433057161_nzmqub.png",
+        bio: "شتاي أولساي ممثل تركي يتمتع بحضور قوي وجاذبية لافتة، يجمع بين الهيبة والهدوء في ملامحه وطريقة حديثه. يمتلك قدرة فريدة على تجسيد الشخصيات الصعبة بعمق يجعل المشاهد يعيش معها لحظة بلحظة. نظرته الحادة وأسلوبيته المتزنة تمنحه حضورًا لا يمكن تجاهله، وفي كل ظهور له يضيف لمسة خاصة تجعل أداءه أكثر تأثيرًا وواقعية. إنه ممثل يترك بصمة واضحة ويصنع من كل دور يقدمه لحظة تستحق التذكر.",
         socialMedia: {
-            instagram: "@ahmetyilmaz",
-            twitter: "@ahmetyilmaz_actor"
+            instagram: "@Cağatay_Uluso",
+            twitter: "@Çağatay_Uluso"
         }
     },
     {
-        id: "zeynep_kaya",
-        name: "زينب كايا",
-        nameEn: "Zeynep Kaya",
-        image: "https://via.placeholder.com/200x200/e91e63/ffffff?text=زينب+كايا",
-        bio: "ممثلة تركية شابة موهوبة",
+        id: "Demet_Özdemir",
+        name: "ديميت اوزديمير",
+        nameEn: "Demet Özdemir",
+        image: "https://wulaopnlopmcwfdritjj.supabase.co/storage/v1/object/public/images/2253b6c9-dc6e-4aed-881b-2e787bafd0b2/1763480232932_kfpuc.png",
+        bio: "ديميت أوزدمير ممثلة تركية تتميز بجمال ساحر وحضور آسر يجذب الأنظار أينما ظهرت، تمتلك ملامح أنيقة وتعبيرًا يجمع بين القوة والرقة، مما يمنحها قدرة خاصة على تجسيد الشخصيات بعمق وإحساس عالٍ. حضورها على الشاشة يشبه الضوء الذي يلفت الانتباه دون أي مجهود، وأسلوبها في الأداء ينبض بالعفوية والصدق، يجعل المشاهد يعيش تفاصيل الدور معها بكل مشاعره. هي نجمة تجمع الروح الجميلة بالشخصية القوية في مظهر واحد، وتترك دائمًا انطباعًا لا ينسى في كل عمل تقدمه.",
         socialMedia: {
-            instagram: "@zeynepkaya",
-            twitter: "@zeynepkaya_act"
+            instagram: "@Demet_Özdemir",
+            twitter: "@Demet_Özdemir"
         }
     },
     {
-        id: "mehmet_demir",
-        name: "محمد ديمير",
-        nameEn: "Mehmet Demir",
-        image: "https://via.placeholder.com/200x200/2c3e50/ffffff?text=محمد+ديمير",
-        bio: "ممثل ومحاور تركي مشهور",
+        id: "Necip_Memili",
+        name: "نجيب ميميلي",
+        nameEn: "Necip Memili",
+        image: "https://wulaopnlopmcwfdritjj.supabase.co/storage/v1/object/public/images/2253b6c9-dc6e-4aed-881b-2e787bafd0b2/1763480486523_dva9u.png",
+        bio: "ممثل صاحب حضور ثقيل ونبرة قوية، يجيد أدوار الهيبة والسطوة، ويمنح شخصياته واقعية تُشعر المشاهد أنه أمام شخصية حقيقية لا مجرد تمثيل.",
         socialMedia: {
-            instagram: "@mehmetdemir",
-            twitter: "@mehmetdemir_fan"
+            instagram: "@Necip_Memili",
+            twitter: "@Necip_Memili"
         }
     },
     {
-        id: "elif_ozturk",
-        name: "إليف أوزتورك",
-        nameEn: "Elif Öztürk",
-        image: "https://via.placeholder.com/200x200/9b59b6/ffffff?text=إليف+أوزتورك",
-        bio: "ممثلة تركية رومانسية مبدعة",
+        id: "Büşra_Develi",
+        name: "بشرى ديفيلي",
+        nameEn: "Büşra Develi",
+        image: "https://wulaopnlopmcwfdritjj.supabase.co/storage/v1/object/public/images/2253b6c9-dc6e-4aed-881b-2e787bafd0b2/1763480678262_l0h8v9.png",
+        bio: "ممثلة راقية المظهر والأداء، تجمع بين الجمال الهادئ والتعبير العميق، وتتميز بحضور سينمائي يعطي قوة لأي مشهد تشارك فيه.",
         socialMedia: {
-            instagram: "@elifozturk",
-            twitter: "@elifozturk_love"
+            instagram: "@Büşra_Develi",
+            twitter: "@BüşraDeveli"
         }
     },
     {
-        id: "can_arslan",
-        name: "جان أرسلان",
-        nameEn: "Can Arslan",
-        image: "https://via.placeholder.com/200x200/f39c12/ffffff?text=جان+أرسلان",
-        bio: "ممثل تركي كوميدي موهوب",
+        id: "Tolga_Tekin",
+        name: "تولغا تيكين",
+        nameEn: "Tolga Tekin",
+        image: "https://wulaopnlopmcwfdritjj.supabase.co/storage/v1/object/public/images/2253b6c9-dc6e-4aed-881b-2e787bafd0b2/1763480904199_u5a2nl.png",
+        bio: "صاحب أداء ناضج وحضور مميز، يجيد تقديم الشخصيات المركّبة ذات الخلفيات الثقيلة، ويترك دائمًا أثرًا واضحًا على سير القصة.",
         socialMedia: {
-            instagram: "@canarslan",
-            twitter: "@canarslan_fun"
+            instagram: "@TolgaTekin",
+            twitter: "@Tolga_Tekin"
         }
     },
     {
-        id: "ayse_kocaman",
-        name: "آيشه كوجامان",
-        nameEn: "Ayşe Kocaman",
-        image: "https://via.placeholder.com/200x200/16a085/ffffff?text=آيشه+كوجامان",
-        bio: "ممثلة تركية مخضرمة بأدوار متنوعة",
+        id: "Ahmet_Rıfat_Şungar",
+        name: "احمد رفاعت شونغار",
+        nameEn: "Ahmet Rıfat Şungar",
+        image: "https://wulaopnlopmcwfdritjj.supabase.co/storage/v1/object/public/images/2253b6c9-dc6e-4aed-881b-2e787bafd0b2/1763481143133_vy00b.png",
+        bio: "ممثل صاحب قوة داخلية تبدو في ملامحه وطريقة أدائه، يجسد الأدوار الجادة بحرفية ويرسم شخصيات لا تُنسى.",
         socialMedia: {
-            instagram: "@aysekocaman",
-            twitter: "@aysekocaman_star"
+            instagram: "@AhmetRıfat_sungar",
+            twitter: "@Ahmet_Rıfat_sungar"
         }
     },
     {
-        id: "burak_yildirim",
-        name: "براق يildيريم",
-        nameEn: "Burak Yıldırım",
-        image: "https://via.placeholder.com/200x200/e74c3c/ffffff?text=براق+يلدريم",
-        bio: "ممثل تركي رياضي ومحارب",
+        id: "Macit_Koper",
+        name: "ماجيت كوپر",
+        nameEn: "Macit Koper",
+        image: "https://wulaopnlopmcwfdritjj.supabase.co/storage/v1/object/public/images/2253b6c9-dc6e-4aed-881b-2e787bafd0b2/1763481342192_v1t15f.png",
+        bio: "فنان مخضرم يتمتع بوقار وخبرة تظهر في كل كلمة ونظرة، يضيف لأي عمل لمسة كلاسيكية مليئة بالهيبة والعمق.",
         socialMedia: {
-            instagram: "@burakyildirim",
-            twitter: "@burakyildirim_act"
+            instagram: "@Macit_Koper",
+            twitter: "@Macit_Koper"
         }
     },
     {
-        id: "selin_aydin",
-        name: "سيلين آييدين",
-        nameEn: "Selin Aydın",
-        image: "https://via.placeholder.com/200x200/8e44ad/ffffff?text=سيلين+آييدين",
-        bio: "ممثلة تركية رومانسية شابة",
+        id: "Ceren_Benderlioğlu",
+        name: "جيرين بندرلي أوغلو",
+        nameEn: "Ceren Benderlioğlu",
+        image: "https://wulaopnlopmcwfdritjj.supabase.co/storage/v1/object/public/images/2253b6c9-dc6e-4aed-881b-2e787bafd0b2/1763481907964_o6tu0u.png",
+        bio: "ممثلة أنيقة تجمع بين الجمال والصلابة، تتميز بإطلالة آسرة وقدرة على نقل المشاعر بثبات واحترافية.",
         socialMedia: {
-            instagram: "@selinaydin",
-            twitter: "@selinaydin_fan"
+            instagram: "@Ceren_Benderlioğlu",
+            twitter: "@Ceren_Benderlioğlu"
         }
+    },
+    {
+    
+        id: "Ebrar_Karabakan",
+        name: "إبرار كاراباكا",
+        nameEn: "Ebrar Karabakan",
+        image: "https://wulaopnlopmcwfdritjj.supabase.co/storage/v1/object/public/images/2253b6c9-dc6e-4aed-881b-2e787bafd0b2/1763482116661_ald6z9.png",
+        bio: "وجه شاب مليء بالحيوية، تمتاز بتعبير صادق يضيف دفئًا للشخصيات التي تؤديها.",
+        socialMedia: {
+            instagram: "@Ebrar_Karabakan",
+            twitter: "@Ebrar_Karabakan"
+        }
+    },
+    {
+        id: "Görkem_Sevindik",
+        name: "غوركيم سفينديك",
+        nameEn: "Görkem Sevindik",
+        image: "https://wulaopnlopmcwfdritjj.supabase.co/storage/v1/object/public/images/2253b6c9-dc6e-4aed-881b-2e787bafd0b2/1763481703629_f60and.png",
+        bio: "ممثل ذو طاقة عالية وحضور قوي، يتقن أدوار القوة والمواجهات، ويمنح مشاهده توترًا وحماسة مميزة.",
+        socialMedia: {
+            instagram: "@Görkem_Sevindik",
+            twitter: "@Görkem_Sevindik"
+        }
+     },
+    {
+        id: "Burak_Deniz",
+        name: "بوراك دينيز",
+        nameEn: "Burak Deniz",
+        image: "https://wulaopnlopmcwfdritjj.supabase.co/storage/v1/object/public/images/2253b6c9-dc6e-4aed-881b-2e787bafd0b2/1763490992404_qiv2n.png",
+        bio: "ممثل تركي بارز يتميز بكاريزما قوية وحضور يجذب الأنظار منذ ظهوره الأول، يمتلك القدرة على تجسيد الشخصيات الرومانسية والدرامية بصدق ويجعل المشاهد يعيش كل لحظة مع الشخصية، أسلوبه يجمع بين الرقة والقوة ويضعه بين أبرز نجوم تركيا في جيله، كل أداء له ينبض بالحياة ويترك أثرًا طويل الأمد في عالم التمثيل",
+        socialMedia: {
+            instagram: "@Burak_Deniz",
+            twitter: "@/Burak_Deniz"
+        }
+      },
+    {
+        id: "Hande_Erçel",
+        name: "هاندا ارتشيل",
+        nameEn: "Hande Erçel",
+        image: "https://wulaopnlopmcwfdritjj.supabase.co/storage/v1/object/public/images/2253b6c9-dc6e-4aed-881b-2e787bafd0b2/1763491601544_kysto.png",
+        bio: "نجمة تركية من ألمع الوجوه في الدراما الرومانسية والكوميدية، تمتاز بحيوية لا تنضب وملامح تخطف القلوب، تجسد الشخصيات بصدق يجعل المشاهد يصدق كل شعور وتجربة، أسلوبها يجمع بين البراءة والجاذبية والكاريزما الطبيعية، وهي اليوم رمز للأناقة والاحتراف في عالم الفن التركي",
+        socialMedia: {
+            instagram: "@Hande_Erçel",
+            twitter: "@/Hande_Erçel"
+        }
+       },
+    {
+        id: "Oğuzhan_Karbi",
+        name: "اوغوزهان كاربي",
+        nameEn: "Oğuzhan Karbi",
+        image: "https://wulaopnlopmcwfdritjj.supabase.co/storage/v1/object/public/images/2253b6c9-dc6e-4aed-881b-2e787bafd0b2/1763491997955_u8eoi3j.png",
+        bio: "ممثل ذو حضور متزن وأداء ناضج، يمتلك قدرة على تقديم الشخصيات المركبة والمعقدة بطريقة تجعلها حقيقية وواقعية، أسلوبه يعكس الخبرة والعمق الفني، وقد ساهم في رسم صورة قوية للممثل الذي يجيد الجمع بين الدراما والكوميديا في أعماله",
+        socialMedia: {
+            instagram: "@Burak_Deniz",
+            twitter: "@/Burak_Deniz"
+        }
+       },
+    {
+        id: "Özcan_Tekdemir",
+        name: "أوزكان تيكدمير",
+        nameEn: "Özcan Tekdemir",
+        image: "https://wulaopnlopmcwfdritjj.supabase.co/storage/v1/object/public/images/2253b6c9-dc6e-4aed-881b-2e787bafd0b2/1763492431389_equgqu.png",
+        bio: "ممثلة تركية شابة تتمتع بموهبة كبيرة في التعبير عن المشاعر الدقيقة، قادرة على تحويل أي شخصية مهما كانت بسيطة إلى شخصية حية تترك أثرًا لدى الجمهور، أسلوبها يجمع بين الواقعية والاحتراف، ويجعلها أحد الأصوات المهمة في الجيل الجديد للتمثيل التركي",
+        socialMedia: {
+            instagram: "@Özcan_Tekdemir",
+            twitter: "@/Özcan_Tekdemir"
+        } 
+       },
+    {
+        id: "Merve_Çağıran",
+        name: "ميرفي تشاغيران",
+        nameEn: "Merve Çağıran",
+        image: "https://wulaopnlopmcwfdritjj.supabase.co/storage/v1/object/public/images/2253b6c9-dc6e-4aed-881b-2e787bafd0b2/1763492591097_1t68i.png",
+        bio: "ممثلة تتمتع بطاقة إيجابية وحضور ساحر، تجسد الشخصيات بروح مرحة وحيوية تجعل المشاهد ينجذب إليها بسهولة، أسلوبها في التمثيل يجمع بين العفوية والانضباط الفني، وقد أثبتت نفسها كموهبة صاعدة في عالم الفن التركي من خلال أدوار متنوعة ومؤثرة",
+        socialMedia: {
+            instagram: "@Merve_Çağıran",
+            twitter: "@/Merve_Çağıran"
+        } 
+       },
+    {
+        id: "Süleyman_Felek",
+        name: "سليمان فيليك",
+        nameEn: "Süleyman Felek",
+        image: "https://wulaopnlopmcwfdritjj.supabase.co/storage/v1/object/public/images/2253b6c9-dc6e-4aed-881b-2e787bafd0b2/1763492724353_pynkcp.png",
+        bio: "ممثل ذو حضور قوي وقدرة على تجسيد الشخصيات الواقعية بقوة وصدق، أسلوبه في التمثيل يجمع بين الثقل الدرامي والطاقة الطبيعية، ويضيف لأي عمل يشارك فيه ثقة وحضورًا يجعل الشخصيات التي يؤديها مؤثرة في ذاكرة المشاهد",
+        socialMedia: {
+            instagram: "@Süleyman_Felek",
+            twitter: "@/Süleyman_Felek"
+        } 
+       },
+    {
+        id: "Bülent_Emrah_Parlak",
+        name: "بولنت إمراه بارلاكي",
+        nameEn: "Bülent Emrah Parlak",
+        image: "https://wulaopnlopmcwfdritjj.supabase.co/storage/v1/object/public/images/2253b6c9-dc6e-4aed-881b-2e787bafd0b2/1763492905762_2irc9.png",
+        bio: "ممثل مخضرم يمتاز بالخبرة والوقار على الشاشة، يقدم أدوار الشخصيات الناضجة بطريقة سلسة وواقعية، أسلوبه يعكس التوازن بين الحكمة والكاريزما، ويجعل كل شخصية يؤديها تترك بصمة طويلة الأمد في عالم الدراما التركية",
+        socialMedia: {
+            instagram: "@Bülent_Emrah_Parlak",
+            twitter: "@/Bülent_Emrah_Parlak"
+        } 
+       },
+    {
+        id: "Demet_Gül",
+        name: "ديميت جول",
+        nameEn: "Demet Gül",
+        image: "https://wulaopnlopmcwfdritjj.supabase.co/storage/v1/object/public/images/2253b6c9-dc6e-4aed-881b-2e787bafd0b2/1763493025716_m4l4s.png",
+        bio: "ممثلة تجمع بين الأناقة والحضور الفني، أسلوبها في التمثيل متقن ويعطي الشخصيات لمسة جمالية وسحرية، قدرتها على التعبير عن المشاعر الدقيقة تجعلها فنانة محترفة ومرموقة في عالم الدراما التركية",
+        socialMedia: {
+            instagram: "@Demet_Gül",
+            twitter: "@/Demet_Gül"
+        } 
+       },
+    {
+        id: "İsmail_Ege_Şaşmaz",
+        name: "اسماعيل ايجي شاسماز",
+        nameEn: "İsmail Ege Şaşmaz",
+        image: "https://wulaopnlopmcwfdritjj.supabase.co/storage/v1/object/public/images/2253b6c9-dc6e-4aed-881b-2e787bafd0b2/1763493170774_vpswlu.png",
+        bio: "ممثل شاب موهوب يجمع بين الحيوية والطاقة الطبيعية على الشاشة، أسلوبه يمزج بين الواقعية والديناميكية في الأداء، وقد استطاع أن يثبت نفسه في عالم الفن التركي من خلال أدوار متنوعة وقوية تجذب انتباه الجمهور",
+        socialMedia: {
+            instagram: "@İsmail_Ege_Şaşmaz",
+            twitter: "@/İsmail_Ege_Şaşmaz"
+        } 
+       },
+    {
+        id: "Murat_Yıldırım",
+        name: "مراد يلدرم",
+        nameEn: "Murat Yıldırım",
+        image: "https://wulaopnlopmcwfdritjj.supabase.co/storage/v1/object/public/images/2253b6c9-dc6e-4aed-881b-2e787bafd0b2/1763494094314_undevn.png",
+        bio: "ممثل تركي مشهور بأدواره الرومانسية والدرامية، بدأ مسيرته في منتصف العقد الأول من الألفية وشارك في أعمال تركية مهمة مثل “Fırtına” و“Rüzgarın Kalbi”، يتميز بأسلوب طبيعي في الأداء وحضور قوي على الشاشة يجمع بين الجاذبية والقوة، ويُعرف بقدرته على تجسيد الشخصيات المعقدة والمتنوعة.",
+        socialMedia: {
+            instagram: "@Murat_Yıldırım",
+            twitter: "@/Murat_Yıldırım"
+        } 
+       },
+    {
+        id: "Cemre_Baysel",
+        name: "جيمري بايسال",
+        nameEn: "Cemre Baysel",
+        image: "https://wulaopnlopmcwfdritjj.supabase.co/storage/v1/object/public/images/2253b6c9-dc6e-4aed-881b-2e787bafd0b2/1763494347861_fkyuj.png",
+        bio: "ممثلة شابة صاعدة في الدراما التركية، بدأت شهرتها من خلال أدوارها في مسلسلات رومانسية وشبابية، تتميز بأسلوب عفوي وحيوي، قدرتها على التعبير عن المشاعر الحقيقية تجعلها محط إعجاب الجمهور، وقد أثبتت نفسها كلاعبة رئيسية في الأعمال التي تمزج بين الرومانسية والتحديات الاجتماعية.",
+        socialMedia: {
+            instagram: "@Burak_Deniz",
+            twitter: "@/Burak_Deniz"
+        } 
+       },
+    {
+        id: "Oya_Unustası",
+        name: "اويا اونوستاسي",
+        nameEn: "Oya Unustası",
+        image: "https://wulaopnlopmcwfdritjj.supabase.co/storage/v1/object/public/images/2253b6c9-dc6e-4aed-881b-2e787bafd0b2/1763494524079_zj2sy.png",
+        bio: "ممثلة تركية متألقة لها حضور كلاسيكي على الشاشة، بدأت مسيرتها في المسرح قبل الانتقال للدراما التلفزيونية، تجيد تقديم الأدوار المعقدة التي تحمل أسرارًا وصراعات داخلية، أسلوبها الفني يجمع بين القوة والأنوثة، مما يجعل كل شخصية تؤديها لا تُنسى.",
+        socialMedia: {
+            instagram: "@Oya_Unustası",
+            twitter: "@/Oya_Unustası"
+        } 
+       },
+    {
+        id: "Yade_Arayıcı",
+        name: "ياده آرايجي",
+        nameEn: "Yade Arayıcı",
+        image: "https://wulaopnlopmcwfdritjj.supabase.co/storage/v1/object/public/images/2253b6c9-dc6e-4aed-881b-2e787bafd0b2/1763494678734_wvicl.png",
+        bio: "ممثلة صغيرة سنًا لكنها موهوبة، قدرتها على أداء المشاهد العاطفية المعقدة جعلت منها طفلة بارزة في الدراما التركية، تعكس البراءة والصراعات النفسية من خلال أداء صادق، ولديها مستقبل واعد في عالم التمثيل مع تطور مستمر لقدراتها الفنية.",
+        socialMedia: {
+            instagram: "@Yade_Arayıcı",
+            twitter: "@/Yade_Arayıcı"
+        } 
+       },
+    {
+        id: "Hilal_Altınbilek",
+        name: "هلال ألتينبيلك",
+        nameEn: "Hilal Altınbilek",
+        image: "https://wulaopnlopmcwfdritjj.supabase.co/storage/v1/object/public/images/2253b6c9-dc6e-4aed-881b-2e787bafd0b2/1763495136827_ertviu.png",
+        bio: "ريحان (فتاة ذكية وجريئة) 	ممثلة وعارضة تركية، بدأت التمثيل من سن مبكرة، شاركت في أعمال كبيرة مثل Bir Zamanlar Çukurova حيث لعبت دور “زوليـها” (Züleyha).  لديها حضور قوي وقدرة على تجسيد الشخصيات الدرامية المعقدة.",
+        socialMedia: {
+            instagram: "@Hilal_Altınbilek",
+            twitter: "@/Hilal_Altınbilek"
+        } 
+       },
+    {
+        id: "Haluk_Bilginer",
+        name: "هالوك بيلجينر",
+        nameEn: "Haluk Bilginer",
+        image: "https://wulaopnlopmcwfdritjj.supabase.co/storage/v1/object/public/images/2253b6c9-dc6e-4aed-881b-2e787bafd0b2/1763495751484_vbrsgj.png",
+        bio: "هالوك بيلغينر ممثل تركي مخضرم يتمتع بمسيرة فنية طويلة تتجاوز أربعة عقود، بدأ في المسرح ثم انتقل للتلفزيون والسينما، وقدم أدوارًا درامية ورومانسية وقوية، اشتهر بقدرته على تجسيد الشخصيات المعقدة والمتعددة الأبعاد، كما حاز جوائز دولية عن أعماله مثل Şahsiyet، ويُعتبر رمزًا للاحترافية والفن الراقي في الوسط التركي والعالمي.",
+        socialMedia: {
+            instagram: "@Haluk_Bilginer",
+            twitter: "@/Haluk_Bilginer"
+        } 
+       },
+    {
+        id: "Tamer_Levent",
+        name: "تامر ليفنت",
+        nameEn: "Tamer Levent",
+        image: "https://wulaopnlopmcwfdritjj.supabase.co/storage/v1/object/public/images/2253b6c9-dc6e-4aed-881b-2e787bafd0b2/1763496119966_nv8yvc.png",
+        bio: "تامر ليفنت ممثل تركي مخضرم جدًا وله مسيرة فنية طويلة تشمل المسرح والسينما والتلفزيون، يتميز بقدرته على تجسيد الشخصيات القوية ذات البعد النفسي والاجتماعي، قدم العديد من الأدوار المرموقة في الدراما التركية وذو حضور يضيف ثقلًا لأي عمل يشارك فيه.",
+        socialMedia: {
+            instagram: "@Tamer_Levent",
+            twitter: "@/Tamer_Levent"
+        } 
+       },
+    {
+        id: "المعرف",
+        name: "اسم الممثل عربي",
+        nameEn: "تركي",
+        image: "https://wulaopnlopmcwfdritjj.supabase.co/storage/v1/object/public/images/2253b6c9-dc6e-4aed-881b-2e787bafd0b2/1763490992404_qiv2n.png",
+        bio: "وصف",
+        socialMedia: {
+            instagram: "@Burak_Deniz",
+            twitter: "@/Burak_Deniz"
+        } 
+       },
+    {
+        id: "المعرف",
+        name: "اسم الممثل عربي",
+        nameEn: "تركي",
+        image: "https://wulaopnlopmcwfdritjj.supabase.co/storage/v1/object/public/images/2253b6c9-dc6e-4aed-881b-2e787bafd0b2/1763490992404_qiv2n.png",
+        bio: "وصف",
+        socialMedia: {
+            instagram: "@Burak_Deniz",
+            twitter: "@/Burak_Deniz"
+        } 
+       },
+    {
+        id: "المعرف",
+        name: "اسم الممثل عربي",
+        nameEn: "تركي",
+        image: "https://wulaopnlopmcwfdritjj.supabase.co/storage/v1/object/public/images/2253b6c9-dc6e-4aed-881b-2e787bafd0b2/1763490992404_qiv2n.png",
+        bio: "وصف",
+        socialMedia: {
+            instagram: "@Burak_Deniz",
+            twitter: "@/Burak_Deniz"
+        } 
+       },
+    {
+        id: "المعرف",
+        name: "اسم الممثل عربي",
+        nameEn: "تركي",
+        image: "https://wulaopnlopmcwfdritjj.supabase.co/storage/v1/object/public/images/2253b6c9-dc6e-4aed-881b-2e787bafd0b2/1763490992404_qiv2n.png",
+        bio: "وصف",
+        socialMedia: {
+            instagram: "@Burak_Deniz",
+            twitter: "@/Burak_Deniz"
+        } 
+       },
+    {
+        id: "المعرف",
+        name: "اسم الممثل عربي",
+        nameEn: "تركي",
+        image: "https://wulaopnlopmcwfdritjj.supabase.co/storage/v1/object/public/images/2253b6c9-dc6e-4aed-881b-2e787bafd0b2/1763490992404_qiv2n.png",
+        bio: "وصف",
+        socialMedia: {
+            instagram: "@Burak_Deniz",
+            twitter: "@/Burak_Deniz"
+        } 
+       },
+    {
+        id: "المعرف",
+        name: "اسم الممثل عربي",
+        nameEn: "تركي",
+        image: "https://wulaopnlopmcwfdritjj.supabase.co/storage/v1/object/public/images/2253b6c9-dc6e-4aed-881b-2e787bafd0b2/1763490992404_qiv2n.png",
+        bio: "وصف",
+        socialMedia: {
+            instagram: "@Burak_Deniz",
+            twitter: "@/Burak_Deniz"
+        } 
+       },
+    {
+        id: "المعرف",
+        name: "اسم الممثل عربي",
+        nameEn: "تركي",
+        image: "https://wulaopnlopmcwfdritjj.supabase.co/storage/v1/object/public/images/2253b6c9-dc6e-4aed-881b-2e787bafd0b2/1763490992404_qiv2n.png",
+        bio: "وصف",
+        socialMedia: {
+            instagram: "@Burak_Deniz",
+            twitter: "@/Burak_Deniz"
+        } 
+       },
+    {
+        id: "المعرف",
+        name: "اسم الممثل عربي",
+        nameEn: "تركي",
+        image: "https://wulaopnlopmcwfdritjj.supabase.co/storage/v1/object/public/images/2253b6c9-dc6e-4aed-881b-2e787bafd0b2/1763490992404_qiv2n.png",
+        bio: "وصف",
+        socialMedia: {
+            instagram: "@Burak_Deniz",
+            twitter: "@/Burak_Deniz"
+        } 
+       },
+    {
+        id: "المعرف",
+        name: "اسم الممثل عربي",
+        nameEn: "تركي",
+        image: "https://wulaopnlopmcwfdritjj.supabase.co/storage/v1/object/public/images/2253b6c9-dc6e-4aed-881b-2e787bafd0b2/1763490992404_qiv2n.png",
+        bio: "وصف",
+        socialMedia: {
+            instagram: "@Burak_Deniz",
+            twitter: "@/Burak_Deniz"
+        } 
+       },
+    {
+        id: "المعرف",
+        name: "اسم الممثل عربي",
+        nameEn: "تركي",
+        image: "https://wulaopnlopmcwfdritjj.supabase.co/storage/v1/object/public/images/2253b6c9-dc6e-4aed-881b-2e787bafd0b2/1763490992404_qiv2n.png",
+        bio: "وصف",
+        socialMedia: {
+            instagram: "@Burak_Deniz",
+            twitter: "@/Burak_Deniz"
+        } 
+       },
+    {
+        id: "المعرف",
+        name: "اسم الممثل عربي",
+        nameEn: "تركي",
+        image: "https://wulaopnlopmcwfdritjj.supabase.co/storage/v1/object/public/images/2253b6c9-dc6e-4aed-881b-2e787bafd0b2/1763490992404_qiv2n.png",
+        bio: "وصف",
+        socialMedia: {
+            instagram: "@Burak_Deniz",
+            twitter: "@/Burak_Deniz"
+        } 
+       },
+    {
+        id: "المعرف",
+        name: "اسم الممثل عربي",
+        nameEn: "تركي",
+        image: "https://wulaopnlopmcwfdritjj.supabase.co/storage/v1/object/public/images/2253b6c9-dc6e-4aed-881b-2e787bafd0b2/1763490992404_qiv2n.png",
+        bio: "وصف",
+        socialMedia: {
+            instagram: "@Burak_Deniz",
+            twitter: "@/Burak_Deniz"
+        } 
+       },
+    {
+        id: "المعرف",
+        name: "اسم الممثل عربي",
+        nameEn: "تركي",
+        image: "https://wulaopnlopmcwfdritjj.supabase.co/storage/v1/object/public/images/2253b6c9-dc6e-4aed-881b-2e787bafd0b2/1763490992404_qiv2n.png",
+        bio: "وصف",
+        socialMedia: {
+            instagram: "@Burak_Deniz",
+            twitter: "@/Burak_Deniz"
+        } 
+       },
+    {
+        id: "المعرف",
+        name: "اسم الممثل عربي",
+        nameEn: "تركي",
+        image: "https://wulaopnlopmcwfdritjj.supabase.co/storage/v1/object/public/images/2253b6c9-dc6e-4aed-881b-2e787bafd0b2/1763490992404_qiv2n.png",
+        bio: "وصف",
+        socialMedia: {
+            instagram: "@Burak_Deniz",
+            twitter: "@/Burak_Deniz"
+        } 
+       },
+    {
+        id: "المعرف",
+        name: "اسم الممثل عربي",
+        nameEn: "تركي",
+        image: "https://wulaopnlopmcwfdritjj.supabase.co/storage/v1/object/public/images/2253b6c9-dc6e-4aed-881b-2e787bafd0b2/1763490992404_qiv2n.png",
+        bio: "وصف",
+        socialMedia: {
+            instagram: "@Burak_Deniz",
+            twitter: "@/Burak_Deniz"
+        } 
+       },
+    {
+        id: "المعرف",
+        name: "اسم الممثل عربي",
+        nameEn: "تركي",
+        image: "https://wulaopnlopmcwfdritjj.supabase.co/storage/v1/object/public/images/2253b6c9-dc6e-4aed-881b-2e787bafd0b2/1763490992404_qiv2n.png",
+        bio: "وصف",
+        socialMedia: {
+            instagram: "@Burak_Deniz",
+            twitter: "@/Burak_Deniz"
+        } 
+       },
+    {
+        id: "المعرف",
+        name: "اسم الممثل عربي",
+        nameEn: "تركي",
+        image: "https://wulaopnlopmcwfdritjj.supabase.co/storage/v1/object/public/images/2253b6c9-dc6e-4aed-881b-2e787bafd0b2/1763490992404_qiv2n.png",
+        bio: "وصف",
+        socialMedia: {
+            instagram: "@Burak_Deniz",
+            twitter: "@/Burak_Deniz"
+        } 
+       },
+    {
+        id: "المعرف",
+        name: "اسم الممثل عربي",
+        nameEn: "تركي",
+        image: "https://wulaopnlopmcwfdritjj.supabase.co/storage/v1/object/public/images/2253b6c9-dc6e-4aed-881b-2e787bafd0b2/1763490992404_qiv2n.png",
+        bio: "وصف",
+        socialMedia: {
+            instagram: "@Burak_Deniz",
+            twitter: "@/Burak_Deniz"
+        } 
+       },
+    {
+        id: "المعرف",
+        name: "اسم الممثل عربي",
+        nameEn: "تركي",
+        image: "https://wulaopnlopmcwfdritjj.supabase.co/storage/v1/object/public/images/2253b6c9-dc6e-4aed-881b-2e787bafd0b2/1763490992404_qiv2n.png",
+        bio: "وصف",
+        socialMedia: {
+            instagram: "@Burak_Deniz",
+            twitter: "@/Burak_Deniz"
+        } 
+       },
+    {
+        id: "المعرف",
+        name: "اسم الممثل عربي",
+        nameEn: "تركي",
+        image: "https://wulaopnlopmcwfdritjj.supabase.co/storage/v1/object/public/images/2253b6c9-dc6e-4aed-881b-2e787bafd0b2/1763490992404_qiv2n.png",
+        bio: "وصف",
+        socialMedia: {
+            instagram: "@Burak_Deniz",
+            twitter: "@/Burak_Deniz"
+        } 
+       },
+    {
+        id: "المعرف",
+        name: "اسم الممثل عربي",
+        nameEn: "تركي",
+        image: "https://wulaopnlopmcwfdritjj.supabase.co/storage/v1/object/public/images/2253b6c9-dc6e-4aed-881b-2e787bafd0b2/1763490992404_qiv2n.png",
+        bio: "وصف",
+        socialMedia: {
+            instagram: "@Burak_Deniz",
+            twitter: "@/Burak_Deniz"
+        } 
+       },
+    {
+        id: "المعرف",
+        name: "اسم الممثل عربي",
+        nameEn: "تركي",
+        image: "https://wulaopnlopmcwfdritjj.supabase.co/storage/v1/object/public/images/2253b6c9-dc6e-4aed-881b-2e787bafd0b2/1763490992404_qiv2n.png",
+        bio: "وصف",
+        socialMedia: {
+            instagram: "@Burak_Deniz",
+            twitter: "@/Burak_Deniz"
+        } 
+       },
+    {
+        id: "المعرف",
+        name: "اسم الممثل عربي",
+        nameEn: "تركي",
+        image: "https://wulaopnlopmcwfdritjj.supabase.co/storage/v1/object/public/images/2253b6c9-dc6e-4aed-881b-2e787bafd0b2/1763490992404_qiv2n.png",
+        bio: "وصف",
+        socialMedia: {
+            instagram: "@Burak_Deniz",
+            twitter: "@/Burak_Deniz"
+        } 
+       },
+    {
+        id: "المعرف",
+        name: "اسم الممثل عربي",
+        nameEn: "تركي",
+        image: "https://wulaopnlopmcwfdritjj.supabase.co/storage/v1/object/public/images/2253b6c9-dc6e-4aed-881b-2e787bafd0b2/1763490992404_qiv2n.png",
+        bio: "وصف",
+        socialMedia: {
+            instagram: "@Burak_Deniz",
+            twitter: "@/Burak_Deniz"
+        } 
+       },
+    {
+        id: "المعرف",
+        name: "اسم الممثل عربي",
+        nameEn: "تركي",
+        image: "https://wulaopnlopmcwfdritjj.supabase.co/storage/v1/object/public/images/2253b6c9-dc6e-4aed-881b-2e787bafd0b2/1763490992404_qiv2n.png",
+        bio: "وصف",
+        socialMedia: {
+            instagram: "@Burak_Deniz",
+            twitter: "@/Burak_Deniz"
+        } 
+       },
+    {
+        id: "المعرف",
+        name: "اسم الممثل عربي",
+        nameEn: "تركي",
+        image: "https://wulaopnlopmcwfdritjj.supabase.co/storage/v1/object/public/images/2253b6c9-dc6e-4aed-881b-2e787bafd0b2/1763490992404_qiv2n.png",
+        bio: "وصف",
+        socialMedia: {
+            instagram: "@Burak_Deniz",
+            twitter: "@/Burak_Deniz"
+        } 
+       },
+    {
+        id: "المعرف",
+        name: "اسم الممثل عربي",
+        nameEn: "تركي",
+        image: "https://wulaopnlopmcwfdritjj.supabase.co/storage/v1/object/public/images/2253b6c9-dc6e-4aed-881b-2e787bafd0b2/1763490992404_qiv2n.png",
+        bio: "وصف",
+        socialMedia: {
+            instagram: "@Burak_Deniz",
+            twitter: "@/Burak_Deniz"
+        } 
+       },
+    {
+        id: "المعرف",
+        name: "اسم الممثل عربي",
+        nameEn: "تركي",
+        image: "https://wulaopnlopmcwfdritjj.supabase.co/storage/v1/object/public/images/2253b6c9-dc6e-4aed-881b-2e787bafd0b2/1763490992404_qiv2n.png",
+        bio: "وصف",
+        socialMedia: {
+            instagram: "@Burak_Deniz",
+            twitter: "@/Burak_Deniz"
+        } 
+       },
+    {
+        id: "المعرف",
+        name: "اسم الممثل عربي",
+        nameEn: "تركي",
+        image: "https://wulaopnlopmcwfdritjj.supabase.co/storage/v1/object/public/images/2253b6c9-dc6e-4aed-881b-2e787bafd0b2/1763490992404_qiv2n.png",
+        bio: "وصف",
+        socialMedia: {
+            instagram: "@Burak_Deniz",
+            twitter: "@/Burak_Deniz"
+        }        
     }
 ];
 
@@ -96,86 +614,88 @@ const actorsData = [
 const actorsInSeries = {
     // مسلسل حلم أشرف (ID: 1)
     1: [
-        { actorId: "ahmet_yilmaz", roleName: "أشرف" },
-        { actorId: "zeynep_kaya", roleName: "نيسان" },
-        { actorId: "mehmet_demir", roleName: "سليم" },
-        { actorId: "elif_ozturk", roleName: "ميرا" },
-        { actorId: "can_arslan", roleName: "فادي" },
-        { actorId: "ayse_kocaman", roleName: "أم زينب" },
-        { actorId: "burak_yildirim", roleName: "رامز" },
-        { actorId: "selin_aydin", roleName: "مريم" }
+        { actorId: "Çağatay_Ulusoy", roleName: "أشرف" },
+        { actorId: "Demet_Özdemir", roleName: "نيسان" },
+        { actorId: "Necip_Memili", roleName:" جوردال" },
+        { actorId: "Büşra_Develi", roleName: "شيدام" },
+        { actorId: "Tolga_Tekin", roleName: "مسلم" },
+        { actorId: "Ebrar_Karabakan", roleName: "عفراء" },
+        { actorId: "Ahmet_Rıfat_Şungar", roleName: "فاروق" },
+        { actorId: "Görkem_Sevindik", roleName: "قدير" },
+        { actorId: "Macit_Koper", roleName: "الأب يعقوب" },
+        { actorId: "Ceren_Benderlioğlu", roleName: "إيرماك" }
+        
     ],
     
     // مسلسل الحب لا يفهم الكلام (ID: 2)
     2: [
-        { actorId: "can_arslan", roleName: "مراد" },
-        { actorId: "selin_aydin", roleName: "حياة" },
-        { actorId: "mehmet_demir", roleName: "يوسف" },
-        { actorId: "zeynep_kaya", roleName: "سارة" },
-        { actorId: "burak_yildirim", roleName: "علي" },
-        { actorId: "ayse_kocaman", roleName: "أم حياة" },
-        { actorId: "elif_ozturk", roleName: "لينا" },
-        { actorId: "ahmet_yilmaz", roleName: "حسام" }
+        { actorId: "Burak_Deniz", roleName: "مراد سارسيلماز" },
+        { actorId: "Hande_Erçel", roleName: "حياة اوزون" },
+        { actorId: "Oğuzhan_Karbi", roleName:" دوروك سارسيلماز" },
+        { actorId: "Özcan_Tekdemir", roleName: "آصلي" },
+        { actorId: "Merve_Çağıran", roleName: "إيبيك" },
+        { actorId: "Süleyman_Felek", roleName: "كرم" },
+        { actorId: "Bülent_Emrah_Parlak", roleName: "جيميل اوزون" },
+        { actorId: "İsmail_Ege_Şaşmaz", roleName: "إبراهيم" },
+        { actorId: "Demet_Gül", roleName: "توفال" }
+        
     ],
     
     // مسلسل ورود ودنوب (ID: 3)
     3: [
-        { actorId: "burak_yildirim", roleName: "جان" },
-        { actorId: "elif_ozturk", roleName: "صانم" },
-        { actorId: "zeynep_kaya", roleName: "إيرين" },
-        { actorId: "can_arslan", roleName: "إيليف" },
-        { actorId: "ahmet_yilmaz", roleName: "تينو" },
-        { actorId: "ayse_kocaman", roleName: "أم صانم" },
-        { actorId: "selin_aydin", roleName: "دنيز" },
-        { actorId: "mehmet_demir", roleName: "أرات" }
+        { actorId: "Murat_Yıldırım", roleName: "سرحات" },
+        { actorId: "Cemre_Baysel", roleName: "زينب" },
+        { actorId: "Oya_Unustası", roleName: "براك" },
+        { actorId: "Yade_Arayıcı", roleName: "قدر" }
+        
     ],
     
     // مسلسل المحتالون (ID: 4)
     4: [
-        { actorId: "mehmet_demir", roleName: "أرطغرل" },
-        { actorId: "ayse_kocaman", roleName: "هلبه" },
-        { actorId: "ahmet_yilmaz", roleName: "سولمان شاه" },
-        { actorId: "zeynep_kaya", roleName: "السلطانة مالحة" },
-        { actorId: "burak_yildirim", roleName: "أرنوت" },
-        { actorId: "elif_ozturk", roleName: "أسن" },
-        { actorId: "can_arslan", roleName: "دينيز بيه" },
-        { actorId: "selin_aydin", roleName: "إيلالاي" }
+        { actorId: "Burak_Deniz", roleName: "إرتان" },
+        { actorId: "Hilal_Altınbilek", roleName: "آسيا" },
+        { actorId: "Haluk_Bilginer", roleName:" والد ارتان" },
+        { actorId: "Tamer_Levent", roleName: "هدايت" }
+        
     ],
     
     // مسلسل الخليفة (ID: 5)
     5: [
-        { actorId: "ahmet_yilmaz", roleName: "إلهان" },
-        { actorId: "zeynep_kaya", roleName: "آيشة" },
-        { actorId: "elif_ozturk", roleName: "نور" },
-        { actorId: "can_arslan", roleName: "بيرك" },
-        { actorId: "burak_yildirim", roleName: "فائق" },
-        { actorId: "selin_aydin", roleName: "سينم" },
-        { actorId: "mehmet_demir", roleName: "متين" },
-        { actorId: "ayse_kocaman", roleName: "أم آيشة" }
+        { actorId: "Çağatay_Ulusoy", roleName: "أشرف" },
+        { actorId: "Demet_Özdemir", roleName: "نيسان" },
+        { actorId: "Necip_Memili", roleName:" جوردال" },
+        { actorId: "Büşra_Develi", roleName: "شيدام" },
+        { actorId: "Tolga_Tekin", roleName: "مسلم" },
+        { actorId: "Ahmet_Rıfat_Şungar", roleName: "فاروق" },
+        { actorId: "Macit_Koper", roleName: "الأب يعقوب" },
+        { actorId: "Ceren_Benderlioğlu", roleName: "إيرماك" }
+        
     ],
     
     // مسلسل الغرفة المزدوجة (ID: 6)
     6: [
-        { actorId: "can_arslan", roleName: "إيليف" },
-        { actorId: "selin_aydin", roleName: "ديلارا" },
-        { actorId: "burak_yildirim", roleName: "توقاي" },
-        { actorId: "zeynep_kaya", roleName: "نورا" },
-        { actorId: "elif_ozturk", roleName: "ألين" },
-        { actorId: "ahmet_yilmaz", roleName: "جومان" },
-        { actorId: "ayse_kocaman", roleName: "أم ديلارا" },
-        { actorId: "mehmet_demir", roleName: "تولجا" }
+        { actorId: "Çağatay_Ulusoy", roleName: "أشرف" },
+        { actorId: "Demet_Özdemir", roleName: "نيسان" },
+        { actorId: "Necip_Memili", roleName:" جوردال" },
+        { actorId: "Büşra_Develi", roleName: "شيدام" },
+        { actorId: "Tolga_Tekin", roleName: "مسلم" },
+        { actorId: "Ahmet_Rıfat_Şungar", roleName: "فاروق" },
+        { actorId: "Macit_Koper", roleName: "الأب يعقوب" },
+        { actorId: "Ceren_Benderlioğlu", roleName: "إيرماك" }
+        
     ],
     
     // مسلسل ميرا وسليم (ID: 7)
     7: [
-        { actorId: "zeynep_kaya", roleName: "ميرا" },
-        { actorId: "ahmet_yilmaz", roleName: "سليم" },
-        { actorId: "elif_ozturk", roleName: "لينا" },
-        { actorId: "can_arslan", roleName: "أوميت" },
-        { actorId: "burak_yildirim", roleName: "سادات" },
-        { actorId: "selin_aydin", roleName: "فاهيرا" },
-        { actorId: "ayse_kocaman", roleName: "أم ميرا" },
-        { actorId: "mehmet_demir", roleName: "عبد الرحمن" }
+        { actorId: "Çağatay_Ulusoy", roleName: "أشرف" },
+        { actorId: "Demet_Özdemir", roleName: "نيسان" },
+        { actorId: "Necip_Memili", roleName:" جوردال" },
+        { actorId: "Büşra_Develi", roleName: "شيدام" },
+        { actorId: "Tolga_Tekin", roleName: "مسلم" },
+        { actorId: "Ahmet_Rıfat_Şungar", roleName: "فاروق" },
+        { actorId: "Macit_Koper", roleName: "الأب يعقوب" },
+        { actorId: "Ceren_Benderlioğlu", roleName: "إيرماك" }
+        
     ]
 };
 
