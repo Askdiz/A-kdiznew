@@ -1028,10 +1028,55 @@ function displayActorSeries(actorId) {
     // إنشاء بطاقات المسلسلات
     actorSeriesGrid.innerHTML = '';
     
-    actorSeries.forEach(series => {
+    // تقسيم المسلسلات إلى ثابتة (أول بطاقتين) ومتحركة (الباقي)
+    const fixedSeries = actorSeries.slice(0, 2);
+    const sliderSeries = actorSeries.slice(2);
+    
+    // 1. عرض البطاقات الثابتة (الصف الأول)
+    const fixedContainer = document.createElement('div');
+    fixedContainer.className = 'actor-series-fixed-row';
+    
+    fixedSeries.forEach(series => {
         const seriesCard = createActorSeriesCard(series);
-        actorSeriesGrid.appendChild(seriesCard);
+        fixedContainer.appendChild(seriesCard);
     });
+    
+    actorSeriesGrid.appendChild(fixedContainer);
+    
+    // 2. إنشاء شريحة العرض (Slider) للمسلسلات المتبقية (الصف الثاني)
+    if (sliderSeries.length > 0) {
+        const sliderContainer = document.createElement('div');
+        sliderContainer.className = 'actor-series-slider-container';
+        
+        const sliderWrapper = document.createElement('div');
+        sliderWrapper.className = 'actor-series-slider-wrapper';
+        sliderWrapper.id = `actorSliderWrapper-${actorId}`;
+        
+        const paginationContainer = document.createElement('div');
+        paginationContainer.className = 'actor-series-pagination';
+        paginationContainer.id = `actorSliderPagination-${actorId}`;
+        
+        sliderSeries.forEach((series, index) => {
+            const seriesCard = createActorSeriesCard(series);
+            seriesCard.classList.add('actor-series-slide');
+            seriesCard.dataset.slideIndex = index;
+            sliderWrapper.appendChild(seriesCard);
+            
+            // إنشاء نقطة الترقيم
+            const dot = document.createElement('span');
+            dot.className = 'pagination-dot';
+            dot.dataset.slideIndex = index;
+            dot.onclick = () => goToSlide(actorId, index);
+            paginationContainer.appendChild(dot);
+        });
+        
+        sliderContainer.appendChild(sliderWrapper);
+        sliderContainer.appendChild(paginationContainer);
+        actorSeriesGrid.appendChild(sliderContainer);
+        
+        // تهيئة الشريحة
+        initializeActorSlider(actorId, sliderSeries.length);
+    }
 }
 
 /**
@@ -1039,7 +1084,58 @@ function displayActorSeries(actorId) {
  * @param {Object} series - معلومات المسلسل
  * @returns {HTMLElement} - عنصر HTML للبطاقة
  */
-function createActorSeriesCard(series) {
+// متغير لتتبع الشريحة الحالية لكل ممثل
+const actorSliderStates = {};
+
+/**
+ * تهيئة شريحة العرض
+ * @param {string} actorId - معرف الممثل
+ * @param {number} totalSlides - العدد الكلي للشرائح
+ */
+function initializeActorSlider(actorId, totalSlides) {
+    actorSliderStates[actorId] = {
+        currentSlide: 0,
+        totalSlides: totalSlides
+    };
+    updateSlider(actorId);
+}
+
+/**
+ * الانتقال إلى شريحة معينة
+ * @param {string} actorId - معرف الممثل
+ * @param {number} index - فهرس الشريحة
+ */
+function goToSlide(actorId, index) {
+    if (actorSliderStates[actorId] && index >= 0 && index < actorSliderStates[actorId].totalSlides) {
+        actorSliderStates[actorId].currentSlide = index;
+        updateSlider(actorId);
+    }
+}
+
+/**
+ * تحديث عرض الشريحة والنقاط
+ * @param {string} actorId - معرف الممثل
+ */
+function updateSlider(actorId) {
+    const state = actorSliderStates[actorId];
+    if (!state) return;
+    
+    const wrapper = document.getElementById(`actorSliderWrapper-${actorId}`);
+    const dots = document.querySelectorAll(`#actorSliderPagination-${actorId} .pagination-dot`);
+    
+    if (wrapper) {
+        // حساب الإزاحة (تحريك البطاقة الحالية إلى العرض)
+        const offset = -state.currentSlide * 100; // 100% لأن كل بطاقة تأخذ 100% من عرض الحاوية
+        wrapper.style.transform = `translateX(${offset}%)`;
+    }
+    
+    dots.forEach((dot, index) => {
+        dot.classList.toggle('active', index === state.currentSlide);
+    });
+}
+
+/**
+ * إنشاء بطاقة مسلسل الممثل
     const seriesCard = document.createElement('div');
     seriesCard.className = 'actor-series-card';
     seriesCard.onclick = () => {
