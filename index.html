@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Aşk diz - أفضل المسلسلات التركية المترجمة</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <svg width="0" height="0" style="position: absolute; display: none;">
+        <defs>
+            <clipPath id="heart-clip" clipPathUnits="objectBoundingBox">
+                <path d="M0.5,1 C0.5,1,0.02,0.618,0.02,0.3 C0.02,0.1,0.2,0,0.5,0 C0.8,0,0.98,0.1,0.98,0.3 C0.98,0.618,0.5,1,0.5,1 Z"/>
+            </clipPath>
+            <clipPath id="search-heart-clip" clipPathUnits="objectBoundingBox">
+                <path d="M0.5,1 C0.5,1,0.02,0.618,0.02,0.3 C0.02,0.1,0.2,0,0.5,0 C0.8,0,0.98,0.1,0.98,0.3 C0.98,0.618,0.5,1,0.5,1 Z"/>
+            </clipPath>
+        </defs>
+    </svg>
+
+    <nav>
+        <div class="nav-container">
+            <div class="menu-toggle" onclick="toggleNav()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div>
+                <div class="logo" onclick="handleLogoClick()" style="cursor: pointer;">Aşk diz</div>
+                <div class="logo-subtitle" style="font-size: 13px; color: var(--text-gray); font-weight: 500;">المسلسلات التركية</div>
+            </div>
+            <div class="nav-links" id="navLinks">
+                <!-- أيقونة تسجيل الحساب في أعلى القائمة الجانبية -->
+                <div class="sidebar-account-section">
+                    <button id="accountButton" onclick="openAuthModal()" title="تسجيل الدخول"></button>
+                    <div class="account-info" id="accountInfo" style="display: none;">
+                        <span class="user-name" id="userNameDisplay"></span>
+                        <button class="logout-btn" onclick="handleLogout()">خروج</button>
+                    </div>
+                </div>
+                
+                <a href="#home" id="navHome" data-section="series" onclick="switchSection('series'); closeNav();"><i class="fas fa-home"></i> الرئيسية</a>
+                <a href="#series" id="navSeries" data-section="series" onclick="switchSection('series'); closeNav();"><i class="fas fa-tv"></i> المسلسلات</a>
+                <a href="#" id="navNewSeries" onclick="renderNewSeries();"><i class="fas fa-fire"></i> الجديد</a>
+                <a href="#" id="navMostWatched" onclick="renderMostWatchedSeries();"><i class="fas fa-star"></i> الأكثر مشاهدة</a>
+                <a href="#" id="favoritesNavBtn" onclick="checkAuthAndRenderFavorites();"><i class="fas fa-heart-circle"></i> المفضلة</a>
+                <a href="#" id="navColorPicker" onclick="openColorPickerModal();"><i class="fas fa-palette"></i> تغيير اللون</a>
+                
+                <!-- أزرار دعم الموقع المرتبة في الأسفل -->
+                <div class="support-buttons">
+                    <a href="https://askdiz-video-vault-23702.lovable.app/" target="_blank" title="Aşk diz tyob"><i class="fas fa-link"></i> رابط الموقع</a>
+                    <a href="#" target="_blank"><i class="fab fa-facebook-f"></i> فيسبوك</a>
+                    <a href="#" target="_blank"><i class="fab fa-twitter"></i> تويتر</a>
+                    <a href="#" target="_blank"><i class="fab fa-instagram"></i> انستغرام</a>
+                    <a href="#" target="_blank"><i class="fab fa-youtube"></i> يوتيوب</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header id="home">
+        <div class="main-title-container" id="mainTitleContainer">
+            <div id="title-frame"></div>
+            <div id="clickable-area">
+                <span class="title-word" id="word-ask">Aşk</span>
+                <i class="fas fa-heart" id="clickable-heart"></i>
+                <span class="title-word hidden" id="word-diz">diz</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="search-section">
+        <div class="search-container">
+            <input type="text" id="seriesSearchInput" placeholder="ابحث عن مسلسل (بالعربية أو التركية)...">
+            <button id="searchButton">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+    </div>
+
+    <section class="container" id="series">
+        <h2 class="section-title"><i class="fas fa-tv"></i> المسلسلات المترجمة</h2>
+        <div class="series-grid" id="seriesGrid"></div>
+        
+        <!-- قسم زر تصفح المزيد -->
+        <div class="load-more-section" id="loadMoreSection" style="display: none;">
+            <button class="load-more-btn" id="loadMoreBtn" onclick="loadMoreSeries()">
+                <i class="fas fa-plus-circle"></i>
+                تصفح المزيد من المسلسلات
+            </button>
+        </div>
+    </section>
+
+    <section class="container" id="favorites" style="display: none;">
+        <h2 class="section-title"><i class="fas fa-heart-circle"></i> مسلسلاتي المفضلة</h2>
+        <p id="noFavoritesMessage" style="text-align: center; color: var(--text-gray); font-size: 18px; margin-top: 30px; display: none;">لم تقم بإضافة أي مسلسل إلى المفضلة بعد. ابدأ باستكشاف مسلسلاتنا الرومانسية!</p>
+        <div class="series-grid" id="favoritesGrid">
+            </div>
+    </section>
+
+    <button onclick="scrollToTop()" id="scrollToTopBtn" title="الصعود للأعلى">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+    
+    <div class="search-modal-overlay" id="searchModalOverlay">
+        <div class="search-modal-content">
+            <button class="close-search-btn" onclick="closeSearchModal()">
+                <i class="fas fa-times"></i>
+            </button>
+            <h2 class="search-modal-title"><i class="fas fa-search"></i> نتائج البحث</h2>
+            <p id="searchNoResultsMessage" style="text-align: center; color: var(--text-gray); font-size: 18px; margin-top: 30px; display: none;">عفواً، لا توجد نتائج مطابقة لبحثك.</p>
+            <div class="series-grid search-results-grid" id="searchResultsGrid">
+                </div>
+        </div>
+    </div>
+
+    <div class="details-modal-overlay" id="detailsModalOverlay">
+        <div class="details-page">
+            <div class="details-content">
+                <button class="close-details-btn" onclick="closeDetailsPage()">
+                    <i class="fas fa-times"></i>
+                </button>
+                <div class="details-header" id="detailsHeader">
+                    <div class="details-backdrop-container">
+                        <div class="details-backdrop" id="detailsBackdrop"></div>
+                    </div>
+                    <div class="details-info">
+                        <h1 class="details-title" id="detailsTitle"></h1>
+                        <p class="details-title-en" id="detailsTitleEn"></p>
+                        <p id="detailsMeta"></p>
+                    </div>
+                </div>
+                <div class="details-body">
+                    <div class="trailer-section">
+                        <div class="details-description-wrapper">
+                            <p class="details-description" id="detailsDescription"></p>
+                        </div>
+                        <div class="action-btns-container">
+                            <div class="action-btn-wrapper">
+                                <i class="fas fa-heart episode-heart-bg"></i>
+                                <button class="episode-btn" id="starButton">
+                                    <i class="far fa-star"></i>
+                                    <span style="font-size: 14px; font-weight: 500;">تقييم</span>
+                                </button>
+                                <span id="starCountDisplay" style="position: absolute; bottom: 0; font-size: 14px; color: var(--text-gray); font-weight: 500;">(0 نجمة)</span>
+                            </div>
+                            <div class="action-btn-wrapper">
+                                <i class="fas fa-heart episode-heart-bg"></i>
+                                <button class="episode-btn" id="trailerButton">
+                                    <i class="fas fa-film"></i>
+                                    <span style="font-size: 14px; font-weight: 500;">التريلر</span>
+                                </button>
+                            </div>
+                            <div class="action-btn-wrapper">
+                                <i class="fas fa-heart episode-heart-bg"></i>
+                                <button class="episode-btn" id="detailsWishlistBtn">
+                                    <i class="far fa-heart"></i>
+                                    <span style="font-size: 14px; font-weight: 500;">المفضلة</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- قسم الممثلين -->
+                    <h3 class="actors-section-title"><i class="fas fa-users"></i> الممثلين</h3>
+                    <div class="actors-grid" id="actorsGrid">
+                        <!-- سيتم ملء الممثلين هنا بواسطة JavaScript -->
+                    </div>
+                    
+                    <h3 class="episodes-section-title"><i class="fas fa-list-ol"></i> الحلقات</h3>
+                    <div class="episodes-grid" id="episodesGrid">
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="details-modal-overlay" id="waitModal">
+        <div class="wait-content">
+            <h1 id="waitTitle">جارٍ التحضير... يرجى الانتظار 5 ثواني</h1>
+            <h2 id="countdownTimer">5</h2>
+            <button id="watchButton">فتح المشغل الآن</button>
+        </div>
+    </div>
+
+    <div class="details-modal-overlay video-player" id="videoPlayer">
+        <button class="close-player-floating" onclick="closeVideoPlayer()">
+            <i class="fas fa-times"></i>
+        </button>
+        <div class="video-container">
+            <div id="video_player_container"> 
+                </div>
+            <div id="episodeDescriptionBox"></div>
+            <div class="player-navigation" id="playerNavigation">
+                <button id="prevEpisodeBtn" disabled onclick="navigateEpisode(-1)"><i class="fas fa-arrow-right"></i> الحلقة السابقة</button>
+                <button id="nextEpisodeBtn" disabled onclick="navigateEpisode(1)">الحلقة التالية <i class="fas fa-arrow-left"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- نافذة اختيار المشغل -->
+    <div class="player-selection-overlay" id="playerSelectionOverlay">
+        <div class="player-selection-content">
+            <button class="close-player-selection" onclick="closePlayerSelection()">
+                <i class="fas fa-times"></i>
+            </button>
+            <h2><i class="fas fa-play-circle"></i> اختر المشغل</h2>
+            <div class="player-options">
+                <button class="player-option-btn" onclick="selectPlayer('main')">
+                    <i class="fas fa-video"></i>
+                    <span>المشغل الأول</span>
+                </button>
+                <button class="player-option-btn" onclick="selectPlayer('rumble')">
+                    <i class="fab fa-youtube"></i>
+                    <span>مشغل Rumble</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+	    <div class="details-modal-overlay" id="colorPickerModalOverlay">
+	        <div class="details-page auth-modal-content" style="max-width: 350px;">
+	            <div class="details-content">
+	                <button class="close-details-btn" onclick="closeColorPickerModal()">
+	                    <i class="fas fa-times"></i>
+	                </button>
+	                <h2 class="section-title" style="font-size: 24px; margin-bottom: 20px;"><i class="fas fa-palette"></i> اختر لون الموقع</h2>
+	                <div class="color-picker-grid" id="colorPickerGrid" style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; padding: 0 10px;">
+	                    <!-- Colors will be injected here by app.js -->
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+
+	    <div class="details-modal-overlay" id="authModalOverlay">
+        <div class="details-page auth-modal-content">
+            <div class="details-content">
+                <button class="close-details-btn" onclick="closeAuthModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+                <h2 class="section-title"><i class="fas fa-user-circle"></i> تسجيل الدخول / اشتراك</h2>
+                <div class="auth-form" style="padding: 0 20px;">
+                    <input type="text" id="authUsername" placeholder="اسم المستخدم (أحرف إنجليزية وأرقام فقط)" title="يجب أن يتكون اسم المستخدم من أحرف إنجليزية وأرقام فقط." pattern="[a-zA-Z0-9]+" required>
+                    <input type="password" id="authPassword" placeholder="كلمة المرور" required>
+                    <p id="authMessage" style="color: var(--primary-light); text-align: center; margin-bottom: 15px;"></p>
+                    <button onclick="handleAuth()">تسجيل الدخول / اشتراك</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- نافذة الممثلين المنبثقة -->
+    <div class="details-modal-overlay" id="actorModalOverlay">
+        <div class="details-page actor-modal-content">
+            <div class="details-content">
+                <button class="close-details-btn" onclick="closeActorModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+                
+                <div class="actor-info-header" id="actorInfoHeader">
+                    <div class="actor-avatar-container">
+                        <img id="actorModalAvatar" src="" alt="صورة الممثل">
+                    </div>
+                    <div class="actor-basic-info">
+                        <h1 class="actor-modal-title" id="actorModalName"></h1>
+                        <p class="actor-modal-title-en" id="actorModalNameEn"></p>
+                        <p class="actor-bio" id="actorModalBio"></p>
+                    </div>
+                </div>
+                
+                <h3 class="actor-series-section-title"><i class="fas fa-tv"></i> المسلسلات التي شارك بها</h3>
+                <div class="actor-series-grid" id="actorSeriesGrid">
+                    <!-- سيتم ملء المسلسلات هنا بواسطة JavaScript -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    
+    <script src="auth.js"></script>
+    <script src="actors_data.js"></script>
+    <script src="app.js"></script>
+    
+    <!-- شريط حقوق الطبع والنشر -->
+    <div class="footer-bar">
+        &copy; Aşk diz 2025. جميع الحقوق محفوظة.
+    </div>
+</body>
+</html>

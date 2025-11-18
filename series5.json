@@ -1,0 +1,142 @@
+[
+    {
+        "id": 41,
+        "title": "بوابة الزمن",
+        "titleEn": "Zaman Kapısı",
+        "image": "https://placeholder.com/image/zaman.jpg",
+        "description": "دراما فانتازيا عن بوابة تنقل الناس عبر الزمن.",
+        "episodes": ["v3lAL3701"],
+        "episodeDetails": [
+            "الحلقة 1: لا يتوفر وصف مفصل لهذه الحلقة من مسلسل بوابة الزمن."
+        ],
+        "year": 2025,
+        "trailerId": "v3lAL37T1",
+        "isNew": true
+    },
+    {
+        "id": 42,
+        "title": "ليلة القمر",
+        "titleEn": "Ay Gecesi",
+        "image": "https://placeholder.com/image/ay.jpg",
+        "description": "دراما رومانسية تدور في ليلة مقمرة ساحرة.",
+        "episodes": ["v3lAM3801"],
+        "episodeDetails": [
+            "الحلقة 1: لا يتوفر وصف مفصل لهذه الحلقة من مسلسل ليلة القمر."
+        ],
+        "year": 2025,
+        "trailerId": "v3lAM38T1",
+        "isNew": true
+    },
+    {
+        "id": 43,
+        "title": "صوت الصمت",
+        "titleEn": "Sessizliğin Sesi",
+        "image": "https://placeholder.com/image/ses.jpg",
+        "description": "دراما نفسية عن شخص فقد قدرته على الكلام.",
+        "episodes": ["v3lAN3901"],
+        "episodeDetails": [
+            "الحلقة 1: لا يتوفر وصف مفصل لهذه الحلقة من مسلسل صوت الصمت."
+        ],
+        "year": 2025,
+        "trailerId": "v3lAN39T1",
+        "isNew": true
+    },
+    {
+        "id": 44,
+        "title": "دموع الفرح",
+        "titleEn": "Mutluluk Gözyaşları",
+        "image": "https://placeholder.com/image/mutluluk.jpg",
+        "description": "دراما مؤثرة عن عائلة تجد السعادة بعد معاناة.",
+        "episodes": ["v3lAO4001"],
+        "episodeDetails": [
+            "الحلقة 1: لا يتوفر وصف مفصل لهذه الحلقة من مسلسل دموع الفرح."
+        ],
+        "year": 2025,
+        "trailerId": "v3lAO40T1",
+        "isNew": true
+    },
+    {
+        "id": 45,
+        "title": "رحلة العمر",
+        "titleEn": "Ömür Yolculuğu",
+        "image": "https://placeholder.com/image/omur.jpg",
+        "description": "دراما ملهمة عن رحلة اكتشاف الذات.",
+        "episodes": ["v3lAP4101"],
+        "episodeDetails": [
+            "الحلقة 1: لا يتوفر وصف مفصل لهذه الحلقة من مسلسل رحلة العمر."
+        ],
+        "year": 2025,
+        "trailerId": "v3lAP41T1",
+        "isNew": true
+    },
+    {
+        "id": 46,
+        "title": "نسيم البحر",
+        "titleEn": "Deniz Esintisi",
+        "image": "https://placeholder.com/image/esinti.jpg",
+        "description": "دراما رومانسية تدور على الشاطئ الساحر.",
+        "episodes": ["v3lAQ4201"],
+        "episodeDetails": [
+            "الحلقة 1: لا يتوفر وصف مفصل لهذه الحلقة من مسلسل نسيم البحر."
+        ],
+        "year": 2025,
+        "trailerId": "v3lAQ42T1",
+        "isNew": true
+    },
+    {
+        "id": 47,
+        "title": "لقاء الأرواح",
+        "titleEn": "Ruhların Buluşması",
+        "image": "https://placeholder.com/image/ruh.jpg",
+        "description": "دراما روحانية عن أرواح توأم تبحث عن بعضها.",
+        "episodes": ["v3lAR4301"],
+        "episodeDetails": [
+            "الحلقة 1: لا يتوفر وصف مفصل لهذه الحلقة من مسلسل لقاء الأرواح."
+        ],
+        "year": 2025,
+        "trailerId": "v3lAR43T1",
+        "isNew": true
+    },
+    {
+        "id": 48,
+        "title": "حديقة السعادة",
+        "titleEn": "Mutluluk Bahçesi",
+        "image": "https://placeholder.com/image/bahce.jpg",
+        "description": "دراما عائلية تدور في حديقة جميلة مليئة بالذكريات.",
+        "episodes": ["v3lAS4401"],
+        "episodeDetails": [
+            "الحلقة 1: لا يتوفر وصف مفصل لهذه الحلقة من مسلسل حديقة السعادة."
+        ],
+        "year": 2025,
+        "trailerId": "v3lAS44T1",
+        "isNew": true
+    },
+    {
+        "id": 49,
+        "title": "طريق النجوم",
+        "titleEn": "Yıldızlar Yolu",
+        "image": "https://placeholder.com/image/yildiz.jpg",
+        "description": "دراما عن شباب يحلمون بالنجومية في عالم الفن.",
+        "episodes": ["v3lAT4501"],
+        "episodeDetails": [
+            "الحلقة 1: لا يتوفر وصف مفصل لهذه الحلقة من مسلسل طريق النجوم."
+        ],
+        "year": 2025,
+        "trailerId": "v3lAT45T1",
+        "isNew": true
+    },
+    {
+        "id": 50,
+        "title": "وعد الأبدية",
+        "titleEn": "Sonsuzluk Sözü",
+        "image": "https://placeholder.com/image/sonsuz.jpg",
+        "description": "دراما رومانسية عن وعد حب يستمر للأبد.",
+        "episodes": ["v3lAU4601"],
+        "episodeDetails": [
+            "الحلقة 1: لا يتوفر وصف مفصل لهذه الحلقة من مسلسل وعد الأبدية."
+        ],
+        "year": 2025,
+        "trailerId": "v3lAU46T1",
+        "isNew": true
+    }
+]

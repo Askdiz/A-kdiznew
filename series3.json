@@ -1,0 +1,142 @@
+[
+    {
+        "id": 21,
+        "title": "الرحلة الأخيرة",
+        "titleEn": "Son Yolculuk",
+        "image": "https://placeholder.com/image/son.jpg",
+        "description": "دراما نفسية تتناول قصة أشخاص في رحلة مصيرية لا عودة منها.",
+        "episodes": ["v3lR1701"],
+        "episodeDetails": [
+            "الحلقة 1: لا يتوفر وصف مفصل لهذه الحلقة من مسلسل الرحلة الأخيرة."
+        ],
+        "year": 2025,
+        "trailerId": "v3lR17T1",
+        "isNew": true
+    },
+    {
+        "id": 22,
+        "title": "قلعة الأسرار",
+        "titleEn": "Sırların Kalesi",
+        "image": "https://placeholder.com/image/sir.jpg",
+        "description": "مسلسل تاريخي يروي قصصاً من القرون الوسطى المليئة بالمكائد والحب.",
+        "episodes": ["v3lS1801"],
+        "episodeDetails": [
+            "الحلقة 1: لا يتوفر وصف مفصل لهذه الحلقة من مسلسل قلعة الأسرار."
+        ],
+        "year": 2025,
+        "trailerId": "v3lS18T1",
+        "isNew": true
+    },
+    {
+        "id": 23,
+        "title": "العهد المنسي",
+        "titleEn": "Unutulmuş Söz",
+        "image": "https://placeholder.com/image/unut.jpg",
+        "description": "دراما رومانسية عن عهد قديم بين عائلتين يعود ليلاحق الجيل الجديد.",
+        "episodes": ["v3lT1901"],
+        "episodeDetails": [
+            "الحلقة 1: لا يتوفر وصف مفصل لهذه الحلقة من مسلسل العهد المنسي."
+        ],
+        "year": 2025,
+        "trailerId": "v3lT19T1",
+        "isNew": true
+    },
+    {
+        "id": 24,
+        "title": "إيقاع الحياة",
+        "titleEn": "Hayatın Ritmi",
+        "image": "https://placeholder.com/image/hayat.jpg",
+        "description": "قصة ملهمة حول موسيقيين شباب يسعون لتحقيق أحلامهم في إسطنبول.",
+        "episodes": ["v3lU2001"],
+        "episodeDetails": [
+            "الحلقة 1: لا يتوفر وصف مفصل لهذه الحلقة من مسلسل إيقاع الحياة."
+        ],
+        "year": 2025,
+        "trailerId": "v3lU20T1",
+        "isNew": true
+    },
+    {
+        "id": 25,
+        "title": "عائلة النور",
+        "titleEn": "Işık Ailesi",
+        "image": "https://placeholder.com/image/isik.jpg",
+        "description": "دراما عائلية تروي قصة عائلة تواجه تحديات الحياة بالتضامن والحب.",
+        "episodes": ["v3lV2101"],
+        "episodeDetails": [
+            "الحلقة 1: لا يتوفر وصف مفصل لهذه الحلقة من مسلسل عائلة النور."
+        ],
+        "year": 2025,
+        "trailerId": "v3lV21T1",
+        "isNew": true
+    },
+    {
+        "id": 26,
+        "title": "سر البحر",
+        "titleEn": "Denizin Sırrı",
+        "image": "https://placeholder.com/image/deniz.jpg",
+        "description": "دراما غموض ورومانسية تدور أحداثها على الساحل التركي.",
+        "episodes": ["v3lW2201"],
+        "episodeDetails": [
+            "الحلقة 1: لا يتوفر وصف مفصل لهذه الحلقة من مسلسل سر البحر."
+        ],
+        "year": 2025,
+        "trailerId": "v3lW22T1",
+        "isNew": true
+    },
+    {
+        "id": 27,
+        "title": "شارع الأمل",
+        "titleEn": "Umut Sokağı",
+        "image": "https://placeholder.com/image/umut.jpg",
+        "description": "قصة حي شعبي وسكانه الذين يتقاسمون الأفراح والأحزان.",
+        "episodes": ["v3lX2301"],
+        "episodeDetails": [
+            "الحلقة 1: لا يتوفر وصف مفصل لهذه الحلقة من مسلسل شارع الأمل."
+        ],
+        "year": 2025,
+        "trailerId": "v3lX23T1",
+        "isNew": true
+    },
+    {
+        "id": 28,
+        "title": "ليالي الشتاء",
+        "titleEn": "Kış Geceleri",
+        "image": "https://placeholder.com/image/kis.jpg",
+        "description": "دراما رومانسية تدور في الشتاء الثلجي في اسطنبول.",
+        "episodes": ["v3lY2401"],
+        "episodeDetails": [
+            "الحلقة 1: لا يتوفر وصف مفصل لهذه الحلقة من مسلسل ليالي الشتاء."
+        ],
+        "year": 2025,
+        "trailerId": "v3lY24T1",
+        "isNew": true
+    },
+    {
+        "id": 29,
+        "title": "زهرة الصحراء",
+        "titleEn": "Çöl Çiçeği",
+        "image": "https://placeholder.com/image/col.jpg",
+        "description": "قصة امرأة قوية تواجه الظروف القاسية في البادية.",
+        "episodes": ["v3lZ2501"],
+        "episodeDetails": [
+            "الحلقة 1: لا يتوفر وصف مفصل لهذه الحلقة من مسلسل زهرة الصحراء."
+        ],
+        "year": 2025,
+        "trailerId": "v3lZ25T1",
+        "isNew": true
+    },
+    {
+        "id": 30,
+        "title": "ملاك الحارس",
+        "titleEn": "Koruyucu Melek",
+        "image": "https://placeholder.com/image/melek.jpg",
+        "description": "دراما اجتماعية عن شخص يظهر في حياة الآخرين لحمايتهم.",
+        "episodes": ["v3lAA2601"],
+        "episodeDetails": [
+            "الحلقة 1: لا يتوفر وصف مفصل لهذه الحلقة من مسلسل ملاك الحارس."
+        ],
+        "year": 2025,
+        "trailerId": "v3lAA26T1",
+        "isNew": true
+    }
+]

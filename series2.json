@@ -1,0 +1,142 @@
+[
+    {
+        "id": 11,
+        "title": "الزوجة الأخرى",
+        "titleEn": "Diğer Eş",
+        "image": "https://placeholder.com/image/digeres.jpg",
+        "description": "دراما اجتماعية عن صراعات عائلية معقدة.",
+        "episodes": ["v3lH701"],
+        "episodeDetails": [
+            "الحلقة 1: لا يتوفر وصف مفصل لهذه الحلقة من مسلسل الزوجة الأخرى."
+        ],
+        "year": 2025,
+        "trailerId": "v3lH7T1",
+        "isNew": true
+    },
+    {
+        "id": 12,
+        "title": "الكذبة",
+        "titleEn": "Yalan",
+        "image": "https://placeholder.com/image/yalan.jpg",
+        "description": "مسلسل درامي عن مليكة، امرأة تسجن ظلمًا لمدة 20 عامًا، وتكتشف بعد خروجها كذبة كبيرة تخص ابنتها ستغير كل شيء.",
+        "episodes": ["v3lI801"],
+        "episodeDetails": [
+            "الحلقة 1: الخروج. خروج مليكة من السجن وبداية مواجهة العالم الجديد."
+        ],
+        "year": 2025,
+        "trailerId": "v3lI8T1",
+        "isNew": true
+    },
+    {
+        "id": 13,
+        "title": "لا تبكي إسطنبول",
+        "titleEn": "Sen Ağlama İstanbul",
+        "image": "https://placeholder.com/image/senaglama.jpg",
+        "description": "دراما شائقة تدور أحداثها بين الحب والصراعات.",
+        "episodes": ["v3lJ901"],
+        "episodeDetails": [
+            "الحلقة 1: لا يتوفر وصف مفصل لهذه الحلقة من مسلسل لا تبكي إسطنبول."
+        ],
+        "year": 2025,
+        "trailerId": "v3lJ9T1",
+        "isNew": true
+    },
+    {
+        "id": 14,
+        "title": "ألف ليلة وليلة (مسلسل)",
+        "titleEn": "Binbir Gece Masalları",
+        "image": "https://placeholder.com/image/binbirgece.jpg",
+        "description": "من المتوقع أن يكون من أكثر المسلسلات ترقبًا، يحكي عن شهريار الذي يلتقي بشهرزاد، التي تُحدث تحولاً في حياته من خلال قصصها المليئة بالحكمة.",
+        "episodes": ["v3lK1001"],
+        "episodeDetails": [
+            "الحلقة 1: البداية. أول لقاء بين شهريار وشهرزاد."
+        ],
+        "year": 2025,
+        "trailerId": "v3lK10T1",
+        "isNew": true
+    },
+    {
+        "id": 15,
+        "title": "قطرات الثلج",
+        "titleEn": "Kardelenler",
+        "image": "https://placeholder.com/image/kardelenler.jpg",
+        "description": "مسلسل درامي جديد يترقبه الجمهور.",
+        "episodes": ["v3lL1101"],
+        "episodeDetails": [
+            "الحلقة 1: لا يتوفر وصف مفصل لهذه الحلقة من مسلسل قطرات الثلج."
+        ],
+        "year": 2025,
+        "trailerId": "v3lL11T1",
+        "isNew": true
+    },
+    {
+        "id": 16,
+        "title": "المال القديم",
+        "titleEn": "Eski Para",
+        "image": "https://placeholder.com/image/eskipara.jpg",
+        "description": "مسلسل درامي جديد يركز على قضايا المال والسلطة.",
+        "episodes": ["v3lM1201"],
+        "episodeDetails": [
+            "الحلقة 1: لا يتوفر وصف مفصل لهذه الحلقة من مسلسل المال القديم."
+        ],
+        "year": 2025,
+        "trailerId": "v3lM12T1",
+        "isNew": true
+    },
+    {
+        "id": 17,
+        "title": "المدينة المخفية",
+        "titleEn": "Gizli Şehir",
+        "image": "https://placeholder.com/image/gidis.jpg",
+        "description": "دراما إثارة وغموض حول مدينة تبدو مثالية ولكنها تخفي أسراراً مرعبة.",
+        "episodes": ["v3lN1301"],
+        "episodeDetails": [
+            "الحلقة 1: لا يتوفر وصف مفصل لهذه الحلقة من مسلسل المدينة المخفية."
+        ],
+        "year": 2025,
+        "trailerId": "v3lN13T1",
+        "isNew": true
+    },
+    {
+        "id": 18,
+        "title": "أطفال الجنة",
+        "titleEn": "Cennetin Çocukları",
+        "image": "https://placeholder.com/image/ocak.jpg",
+        "description": "دراما اجتماعية مؤثرة عن قصة أطفال واجهوا صعوبات الحياة.",
+        "episodes": ["v3lO1401"],
+        "episodeDetails": [
+            "الحلقة 1: لا يتوفر وصف مفصل لهذه الحلقة من مسلسل أطفال الجنة."
+        ],
+        "year": 2025,
+        "trailerId": "v3lO14T1",
+        "isNew": true
+    },
+    {
+        "id": 19,
+        "title": "الظل والنور",
+        "titleEn": "Gölge ve Işık",
+        "image": "https://placeholder.com/image/golge.jpg",
+        "description": "قصة حب معقدة بين شخصيتين متناقضتين تماماً يجمعهما القدر.",
+        "episodes": ["v3lP1501"],
+        "episodeDetails": [
+            "الحلقة 1: لا يتوفر وصف مفصل لهذه الحلقة من مسلسل الظل والنور."
+        ],
+        "year": 2025,
+        "trailerId": "v3lP15T1",
+        "isNew": true
+    },
+    {
+        "id": 20,
+        "title": "طريق الذئاب",
+        "titleEn": "Kurtların Yolu",
+        "image": "https://placeholder.com/image/kurtlar.jpg",
+        "description": "مسلسل أكشن وإثارة حول عالم المافيا والصراعات على السلطة.",
+        "episodes": ["v3lQ1601"],
+        "episodeDetails": [
+            "الحلقة 1: لا يتوفر وصف مفصل لهذه الحلقة من مسلسل طريق الذئاب."
+        ],
+        "year": 2025,
+        "trailerId": "v3lQ16T1",
+        "isNew": true
+    }
+]

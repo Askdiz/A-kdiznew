@@ -1,0 +1,142 @@
+[
+    {
+        "id": 31,
+        "title": "حكاية الربيع",
+        "titleEn": "Bahar Hikayesi",
+        "image": "https://placeholder.com/image/bahar.jpg",
+        "description": "دراما رومانسية تدور أحداثها في فصل الربيع الجميل.",
+        "episodes": ["v3lAB2701"],
+        "episodeDetails": [
+            "الحلقة 1: لا يتوفر وصف مفصل لهذه الحلقة من مسلسل حكاية الربيع."
+        ],
+        "year": 2025,
+        "trailerId": "v3lAB27T1",
+        "isNew": true
+    },
+    {
+        "id": 32,
+        "title": "قلوب متشابكة",
+        "titleEn": "Bağlı Kalpler",
+        "image": "https://placeholder.com/image/bagli.jpg",
+        "description": "دراما تتناول علاقات معقدة بين عدة شخصيات.",
+        "episodes": ["v3lAC2801"],
+        "episodeDetails": [
+            "الحلقة 1: لا يتوفر وصف مفصل لهذه الحلقة من مسلسل قلوب متشابكة."
+        ],
+        "year": 2025,
+        "trailerId": "v3lAC28T1",
+        "isNew": true
+    },
+    {
+        "id": 33,
+        "title": "صدى الماضي",
+        "titleEn": "Geçmişin Yankısı",
+        "image": "https://placeholder.com/image/gecmis.jpg",
+        "description": "قصة عن أسرار الماضي التي تعود لتؤثر على الحاضر.",
+        "episodes": ["v3lAD2901"],
+        "episodeDetails": [
+            "الحلقة 1: لا يتوفر وصف مفصل لهذه الحلقة من مسلسل صدى الماضي."
+        ],
+        "year": 2025,
+        "trailerId": "v3lAD29T1",
+        "isNew": true
+    },
+    {
+        "id": 34,
+        "title": "نبض القلب",
+        "titleEn": "Kalp Atışı",
+        "image": "https://placeholder.com/image/kalp.jpg",
+        "description": "دراما طبية رومانسية تدور في مستشفى كبير.",
+        "episodes": ["v3lAE3001"],
+        "episodeDetails": [
+            "الحلقة 1: لا يتوفر وصف مفصل لهذه الحلقة من مسلسل نبض القلب."
+        ],
+        "year": 2025,
+        "trailerId": "v3lAE30T1",
+        "isNew": true
+    },
+    {
+        "id": 35,
+        "title": "ملكة الليل",
+        "titleEn": "Gece Kraliçesi",
+        "image": "https://placeholder.com/image/gece.jpg",
+        "description": "دراما إثارة عن امرأة غامضة تحكم عالم الليل.",
+        "episodes": ["v3lAF3101"],
+        "episodeDetails": [
+            "الحلقة 1: لا يتوفر وصف مفصل لهذه الحلقة من مسلسل ملكة الليل."
+        ],
+        "year": 2025,
+        "trailerId": "v3lAF31T1",
+        "isNew": true
+    },
+    {
+        "id": 36,
+        "title": "جسر الأحلام",
+        "titleEn": "Rüya Köprüsü",
+        "image": "https://placeholder.com/image/ruya.jpg",
+        "description": "دراما عن أشخاص يلتقون على جسر يغير حياتهم.",
+        "episodes": ["v3lAG3201"],
+        "episodeDetails": [
+            "الحلقة 1: لا يتوفر وصف مفصل لهذه الحلقة من مسلسل جسر الأحلام."
+        ],
+        "year": 2025,
+        "trailerId": "v3lAG32T1",
+        "isNew": true
+    },
+    {
+        "id": 37,
+        "title": "عطر الياسمين",
+        "titleEn": "Yasemin Kokusu",
+        "image": "https://placeholder.com/image/yasemin.jpg",
+        "description": "دراما رومانسية تدور في حديقة الياسمين الجميلة.",
+        "episodes": ["v3lAH3301"],
+        "episodeDetails": [
+            "الحلقة 1: لا يتوفر وصف مفصل لهذه الحلقة من مسلسل عطر الياسمين."
+        ],
+        "year": 2025,
+        "trailerId": "v3lAH33T1",
+        "isNew": true
+    },
+    {
+        "id": 38,
+        "title": "عاصفة الصيف",
+        "titleEn": "Yaz Fırtınası",
+        "image": "https://placeholder.com/image/yaz.jpg",
+        "description": "دراما عن حب صيفي يتحول إلى عاصفة من المشاعر.",
+        "episodes": ["v3lAI3401"],
+        "episodeDetails": [
+            "الحلقة 1: لا يتوفر وصف مفصل لهذه الحلقة من مسلسل عاصفة الصيف."
+        ],
+        "year": 2025,
+        "trailerId": "v3lAI34T1",
+        "isNew": true
+    },
+    {
+        "id": 39,
+        "title": "خيوط القدر",
+        "titleEn": "Kader İplikleri",
+        "image": "https://placeholder.com/image/kader.jpg",
+        "description": "دراما عن كيف يربط القدر بين الأشخاص بطرق غامضة.",
+        "episodes": ["v3lAJ3501"],
+        "episodeDetails": [
+            "الحلقة 1: لا يتوفر وصف مفصل لهذه الحلقة من مسلسل خيوط القدر."
+        ],
+        "year": 2025,
+        "trailerId": "v3lAJ35T1",
+        "isNew": true
+    },
+    {
+        "id": 40,
+        "title": "لحن الحب",
+        "titleEn": "Aşk Melodisi",
+        "image": "https://placeholder.com/image/melodi.jpg",
+        "description": "دراما موسيقية رومانسية عن حب بين موسيقيين.",
+        "episodes": ["v3lAK3601"],
+        "episodeDetails": [
+            "الحلقة 1: لا يتوفر وصف مفصل لهذه الحلقة من مسلسل لحن الحب."
+        ],
+        "year": 2025,
+        "trailerId": "v3lAK36T1",
+        "isNew": true
+    }
+]
