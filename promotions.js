@@ -75,7 +75,7 @@ let playCount = parseInt(localStorage.getItem('playCount') || '0');
 // --- 1. القلب النابض العائم ---
 class FloatingHeartPromo {
     constructor() {
-        this.isShowing = true;
+        this.isShowing = false;
         this.heartElement = null;
         this.timer = null;
     }
@@ -86,7 +86,7 @@ class FloatingHeartPromo {
         // بدء العرض بعد 3 ثوانٍ من تحميل الصفحة
         setTimeout(() => {
             this.startRandomShow();
-        }, 10000);
+        }, 1000);
     }
 
     createHeart() {
@@ -307,7 +307,7 @@ class FloatingSideButton {
         // إظهار بعد ثانية
         setTimeout(() => {
             button.classList.add('show');
-        }, 1000);
+        }, 100);
     }
 }
 
@@ -381,7 +381,7 @@ class WelcomeModal {
         // إظهار بعد 5 ثوانٍ من تحميل الصفحة
         setTimeout(() => {
             this.show();
-        }, 2000);
+        }, 5000);
     }
 
     show() {
@@ -578,7 +578,7 @@ class MidRollPromo {
 
     show(playerContainer) {
         if (this.hasShown || !playerContainer) return;
-        this.hasShown = true;
+        this.hasShown = false;
 
         this.banner = document.createElement('div');
         this.banner.className = 'midroll-promo-banner';
@@ -639,7 +639,7 @@ class PlayerOverlayPromo {
     constructor() {
         this.overlay = null;
         this.timer = null;
-        this.hasShown = true;
+        this.hasShown = false;
     }
 
     init(playerContainer) {
