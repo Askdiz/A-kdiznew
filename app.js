@@ -257,6 +257,84 @@ function renderMostWatchedSeries() {
     closeNav();
 }
 
+// --- PROMOTIONAL CARDS DATA ---
+const promotionalCards = [
+    {
+        id: 1,
+        image: 'https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=400&h=600&fit=crop',
+        title: 'اكتشف عالم السينما',
+        titleEn: 'Discover Cinema World',
+        description: 'آلاف الأفلام في انتظارك',
+        link: 'https://askdiz-video-vault-23702.lovable.app/'
+    },
+    {
+        id: 2,
+        image: 'https://images.unsplash.com/photo-1478720568477-152d9b164e26?w=400&h=600&fit=crop',
+        title: 'أفلام حصرية ومميزة',
+        titleEn: 'Exclusive Movies',
+        description: 'شاهد أحدث الإصدارات',
+        link: 'https://askdiz-video-vault-23702.lovable.app/'
+    },
+    {
+        id: 3,
+        image: 'https://images.unsplash.com/photo-1594908900066-3f47337549d8?w=400&h=600&fit=crop',
+        title: 'عالم الترفيه بلا حدود',
+        titleEn: 'Unlimited Entertainment',
+        description: 'أفلام من جميع الأنواع',
+        link: 'https://askdiz-video-vault-23702.lovable.app/'
+    },
+    {
+        id: 4,
+        image: 'https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=400&h=600&fit=crop',
+        title: 'تجربة مشاهدة فريدة',
+        titleEn: 'Unique Viewing Experience',
+        description: 'استمتع بأعلى جودة',
+        link: 'https://askdiz-video-vault-23702.lovable.app/'
+    },
+    {
+        id: 5,
+        image: 'https://images.unsplash.com/photo-1485846234645-a62644f84728?w=400&h=600&fit=crop',
+        title: 'مكتبة ضخمة من الأفلام',
+        titleEn: 'Massive Movie Library',
+        description: 'اختر ما يناسبك',
+        link: 'https://askdiz-video-vault-23702.lovable.app/'
+    }
+];
+
+// متغير لتتبع البطاقات الترويجية المستخدمة
+let promoCardIndex = 0;
+
+// دالة لإنشاء بطاقة ترويجية
+function createPromotionalCard(cardNumber) {
+    const promo = promotionalCards[cardNumber % promotionalCards.length];
+    
+    return `
+        <div class="series-card promo-card" onclick="window.open('${promo.link}', '_blank');">
+            <div class="heart-shape-wrapper">
+                <div class="series-image-wrapper">
+                    <img src="${promo.image}" alt="${promo.title}" class="series-image promo-image">
+                    
+                    <span class="series-badge promo-badge" style="background: linear-gradient(135deg, var(--primary) 0%, #ff6b00 100%); color: white; border: 2px solid gold; font-size: 14px;">
+                        <i class="fas fa-film"></i> ترويج
+                    </span>
+                    
+                    <div class="series-overlay promo-overlay">
+                        <div class="promo-icon">
+                            <i class="fas fa-video"></i>
+                        </div>
+                        <h3 class="series-title">${promo.title}</h3>
+                        <p class="series-title-en">${promo.titleEn}</p>
+                        <p class="promo-description">${promo.description}</p>
+                        <div class="promo-cta">
+                            <i class="fas fa-external-link-alt"></i> زيارة الموقع
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    `;
+}
+
 // --- RENDERING & NAVIGATION --- 
 
 function renderSeries(seriesArray, gridId = 'seriesGrid', append = false) {
@@ -297,12 +375,36 @@ function renderSeries(seriesArray, gridId = 'seriesGrid', append = false) {
         `;
     };
 
+    // إنشاء مصفوفة البطاقات مع إدراج البطاقات الترويجية
+    let cardsHTML = '';
+    
     if (append) {
-        // إضافة مسلسلات جديدة
-        seriesGrid.innerHTML += seriesArray.map(createSeriesCard).join('');
+        // عند الإضافة (تصفح المزيد)
+        for (let i = 0; i < seriesArray.length; i++) {
+            cardsHTML += createSeriesCard(seriesArray[i]);
+            
+            // إضافة بطاقة ترويجية بعد كل 10 بطاقات
+            if ((i + 1) % 10 === 0 && i < seriesArray.length - 1) {
+                cardsHTML += createPromotionalCard(promoCardIndex);
+                promoCardIndex++;
+            }
+        }
+        seriesGrid.innerHTML += cardsHTML;
     } else {
         // عرض من جديد
-        seriesGrid.innerHTML = seriesArray.map(createSeriesCard).join('');
+        promoCardIndex = 0; // إعادة تعيين العداد
+        
+        for (let i = 0; i < seriesArray.length; i++) {
+            cardsHTML += createSeriesCard(seriesArray[i]);
+            
+            // إضافة بطاقة ترويجية بعد كل 10 بطاقات
+            if ((i + 1) % 10 === 0 && i < seriesArray.length - 1) {
+                cardsHTML += createPromotionalCard(promoCardIndex);
+                promoCardIndex++;
+            }
+        }
+        
+        seriesGrid.innerHTML = cardsHTML;
     }
 
     // تحديث زر "تصفح المزيد"
@@ -403,10 +505,17 @@ function closeSearchModal() {
 
 function renderSearchResults(seriesArray) {
     const resultsGrid = document.getElementById('searchResultsGrid');
-    resultsGrid.innerHTML = seriesArray.map(series => {
+    
+    // إنشاء HTML للنتائج مع البطاقات الترويجية
+    let resultsHTML = '';
+    let promoCardCounter = 0;
+    
+    seriesArray.forEach((series, index) => {
         // تعتمد على calculateTotalStars من ملف auth.js
         const totalStars = typeof calculateTotalStars === 'function' ? calculateTotalStars(series.id) : 0;
-        return `
+        
+        // إضافة بطاقة المسلسل
+        resultsHTML += `
             <div class="search-heart-card" onclick="openDetailsPage(${series.id}); closeSearchModal();">
                 <div class="search-heart-wrapper">
                     <i class="fas fa-heart search-heart"></i>
@@ -420,18 +529,148 @@ function renderSearchResults(seriesArray) {
                 </div>
             </div>
         `;
-    }).join('');
+        
+        // إضافة بطاقة ترويجية كل 6 نتائج
+        if ((index + 1) % 6 === 0 && typeof window.createSearchPromoCard === 'function') {
+            resultsHTML += window.createSearchPromoCard(promoCardCounter);
+            promoCardCounter++;
+        }
+    });
+    
+    resultsGrid.innerHTML = resultsHTML;
 }
 
 function switchSection(sectionId) {
     document.getElementById('series').style.display = 'none';
     document.getElementById('favorites').style.display = 'none';
     
+    // إخفاء قسم الممثلين
+    const actorsSection = document.getElementById('actors');
+    if (actorsSection) {
+        actorsSection.style.display = 'none';
+    }
+    
     const targetSection = document.getElementById(sectionId);
     if (targetSection) {
         targetSection.style.display = 'block';
     }
+    
+    // إذا كان القسم المستهدف هو الممثلين، نقوم بعرضهم
+    if (sectionId === 'actors') {
+        renderAllActors();
+    }
+    
     closeNav();
+}
+
+/**
+ * عرض جميع الممثلين في صفوف
+ */
+function renderAllActors() {
+    const allActorsContainer = document.getElementById('allActorsContainer');
+    if (!allActorsContainer) return;
+    
+    // الحصول على قائمة الممثلين الفريدة (بدون تكرار)
+    const uniqueActors = actorsData.filter((actor, index, self) => 
+        index === self.findIndex((a) => a.id === actor.id)
+    );
+    
+    // تقسيم الممثلين إلى صفوف (10 ممثلين في كل صف)
+    const ACTORS_PER_ROW = 10;
+    const rows = [];
+    
+    for (let i = 0; i < uniqueActors.length; i += ACTORS_PER_ROW) {
+        rows.push(uniqueActors.slice(i, i + ACTORS_PER_ROW));
+    }
+    
+    // إنشاء HTML للصفوف
+    let html = '';
+    
+    rows.forEach((row, rowIndex) => {
+        html += `<div class="actors-row">`;
+        html += `<div class="actors-row-scroll" id="actorsRow${rowIndex}">`;
+        
+        row.forEach(actor => {
+            html += createActorCardMain(actor);
+        });
+        
+        html += `</div></div>`;
+    });
+    
+    allActorsContainer.innerHTML = html;
+    
+    // تفعيل التمرير السلس باليد لكل صف
+    rows.forEach((row, rowIndex) => {
+        initializeSmoothScroll(`actorsRow${rowIndex}`);
+    });
+}
+
+/**
+ * إنشاء بطاقة ممثل للصفحة الرئيسية
+ */
+function createActorCardMain(actor) {
+    return `
+        <div class="actor-card-main" onclick="openActorModal('${actor.id}')">
+            <img src="${actor.image}" 
+                 alt="${actor.name}" 
+                 class="actor-avatar-main" 
+                 onerror="this.src='https://via.placeholder.com/110x110/666666/ffffff?text=${encodeURIComponent(actor.name)}'">
+            <h4 class="actor-name-main">${actor.name}</h4>
+            <p class="actor-name-en">${actor.nameEn}</p>
+        </div>
+    `;
+}
+
+/**
+ * تفعيل التمرير السلس باليد للصفوف
+ */
+function initializeSmoothScroll(elementId) {
+    const element = document.getElementById(elementId);
+    if (!element) return;
+    
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+    
+    element.addEventListener('mousedown', (e) => {
+        isDown = true;
+        element.style.cursor = 'grabbing';
+        startX = e.pageX - element.offsetLeft;
+        scrollLeft = element.scrollLeft;
+    });
+    
+    element.addEventListener('mouseleave', () => {
+        isDown = false;
+        element.style.cursor = 'grab';
+    });
+    
+    element.addEventListener('mouseup', () => {
+        isDown = false;
+        element.style.cursor = 'grab';
+    });
+    
+    element.addEventListener('mousemove', (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - element.offsetLeft;
+        const walk = (x - startX) * 2; // سرعة التمرير
+        element.scrollLeft = scrollLeft - walk;
+    });
+    
+    // دعم اللمس للأجهزة المحمولة
+    let touchStartX = 0;
+    let touchScrollLeft = 0;
+    
+    element.addEventListener('touchstart', (e) => {
+        touchStartX = e.touches[0].pageX;
+        touchScrollLeft = element.scrollLeft;
+    });
+    
+    element.addEventListener('touchmove', (e) => {
+        const touchX = e.touches[0].pageX;
+        const walk = (touchStartX - touchX) * 1.5;
+        element.scrollLeft = touchScrollLeft + walk;
+    });
 }
 
 // --- DETAILS & PLAYER FUNCTIONS --- 
@@ -644,10 +883,23 @@ function closePlayerSelection() {
 function selectPlayer(playerType) {
     closePlayerSelection();
     
-    if (playerType === 'main') {
-        playMainPlayer();
-    } else if (playerType === 'rumble') {
-        playRumblePlayer();
+    // عرض ترويج Pre-Roll قبل بدء المشغل
+    if (window.showPreRollPromo && typeof window.showPreRollPromo === 'function') {
+        window.showPreRollPromo(() => {
+            // بعد انتهاء Pre-Roll، تشغيل المشغل المطلوب
+            if (playerType === 'main') {
+                playMainPlayer();
+            } else if (playerType === 'rumble') {
+                playRumblePlayer();
+            }
+        });
+    } else {
+        // إذا لم يكن نظام الترويجات متاحاً، تشغيل مباشر
+        if (playerType === 'main') {
+            playMainPlayer();
+        } else if (playerType === 'rumble') {
+            playRumblePlayer();
+        }
     }
 }
 
@@ -701,6 +953,11 @@ function playMainPlayer() {
     
     videoPlayer.style.display = 'flex';
     setTimeout(() => videoPlayer.classList.add('active'), 10);
+    
+    // تهيئة ترويجات المشغل (Mid-Roll و Overlay)
+    if (window.initPlayerPromos && typeof window.initPlayerPromos === 'function') {
+        window.initPlayerPromos(videoPlayer);
+    }
 }
 
 function playRumblePlayer() {
@@ -758,6 +1015,11 @@ function playRumblePlayer() {
     
     videoPlayer.style.display = 'flex';
     setTimeout(() => videoPlayer.classList.add('active'), 10);
+    
+    // تهيئة ترويجات المشغل (Mid-Roll و Overlay)
+    if (window.initPlayerPromos && typeof window.initPlayerPromos === 'function') {
+        window.initPlayerPromos(videoPlayer);
+    }
 }
 
 function navigateEpisode(direction) {
@@ -789,6 +1051,11 @@ function closeVideoPlayer() {
     const videoPlayer = document.getElementById('videoPlayer');
     const videoPlayerContainer = document.getElementById('video_player_container');
     
+    // إعادة تعيين ترويجات المشغل
+    if (window.resetPlayerPromos && typeof window.resetPlayerPromos === 'function') {
+        window.resetPlayerPromos();
+    }
+    
     videoPlayerContainer.innerHTML = '';
     
     videoPlayer.classList.remove('active');
@@ -805,6 +1072,12 @@ function closeVideoPlayer() {
         setTimeout(() => {
             videoPlayer.style.display = 'none';
             document.body.style.overflow = 'auto'; 
+            
+            // عرض ترويج Post-Roll بعد إغلاق المشغل
+            if (window.showPostRollPromo && typeof window.showPostRollPromo === 'function') {
+                window.showPostRollPromo();
+            }
+            
             // Open the details page after the player is closed
             if (typeof openDetailsPage === 'function') {
                 openDetailsPage(seriesIdToReopen);
@@ -815,7 +1088,12 @@ function closeVideoPlayer() {
          // Normal closing if no series was playing 
         setTimeout(() => {
             videoPlayer.style.display = 'none';
-            document.body.style.overflow = 'auto'; 
+            document.body.style.overflow = 'auto';
+            
+            // عرض ترويج Post-Roll بعد إغلاق المشغل
+            if (window.showPostRollPromo && typeof window.showPostRollPromo === 'function') {
+                window.showPostRollPromo();
+            }
         }, 500);
     }
 }
@@ -851,7 +1129,15 @@ function scrollToTop() {
 
 window.onscroll = function() {
     const btn = document.getElementById('scrollToTopBtn');
-    if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+    const loadMoreSection = document.getElementById('loadMoreSection');
+    
+    // يظهر زر العودة للأعلى فقط عندما:
+    // 1. تم التمرير لأسفل (أكثر من 300px)
+    // 2. زر "تصفح المزيد" مخفي (انتهت المسلسلات)
+    const scrolled = document.body.scrollTop > 300 || document.documentElement.scrollTop > 300;
+    const loadMoreHidden = loadMoreSection && loadMoreSection.style.display === 'none';
+    
+    if (scrolled && loadMoreHidden) {
         btn.style.display = "block";
     } else {
         btn.style.display = "none";
@@ -869,6 +1155,13 @@ function initializeEventListeners() {
     // Navigation Links
     document.getElementById('navHome').onclick = () => switchSection('series');
     document.getElementById('navSeries').onclick = () => switchSection('series');
+    
+    // رابط الممثلين
+    const navActors = document.getElementById('navActors');
+    if (navActors) {
+        navActors.onclick = () => switchSection('actors');
+    }
+    
     document.getElementById('navNewSeries').onclick = renderNewSeries;
     document.getElementById('navMostWatched').onclick = renderMostWatchedSeries;
     document.getElementById('navColorPicker').onclick = openColorPickerModal;
@@ -1015,6 +1308,51 @@ function openActorModal(actorId) {
 }
 
 /**
+/**
+ * إنشاء HTML لبطاقة موقع الأفلام
+ * @param {number} index - رقم البطاقة (1, 2, أو 3)
+ * @returns {string} - HTML للبطاقة
+ */
+function createMovieSiteCardHTML(index) {
+    const movieCards = [
+        {
+            image: 'https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=800&q=80',
+            title: '🎬 عالم الأفلام',
+            subtitle: 'اكتشف أروع الأفلام الرومانسية',
+            alt: 'عالم الأفلام الرومانسية'
+        },
+        {
+            image: 'https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=800&q=80',
+            title: '🌟 رحلة السينما',
+            subtitle: 'أجمل القصص في انتظارك',
+            alt: 'رحلة السينما'
+        },
+        {
+            image: 'https://images.unsplash.com/photo-1478720568477-152d9b164e26?w=800&q=80',
+            title: '✨ سحر الشاشة',
+            subtitle: 'تجربة سينمائية لا تُنسى',
+            alt: 'سحر الشاشة'
+        }
+    ];
+    
+    const card = movieCards[index - 1];
+    
+    return `
+        <div class="series-card actor-movies-card" onclick="window.open('https://id-preview--ade74e2d-9472-46b0-b859-05333b895cd2.lovable.app/', '_blank')">
+            <div class="heart-shape-wrapper">
+                <div class="series-image-wrapper">
+                    <img src="${card.image}" alt="${card.alt}" class="series-image">
+                    <div class="series-overlay">
+                        <h3 class="series-title">${card.title}</h3>
+                        <p class="series-title-en">${card.subtitle}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    `;
+}
+
+/**
  * عرض مسلسلات الممثل
  * @param {string} actorId - معرف الممثل
  */
@@ -1037,65 +1375,75 @@ function displayActorSeries(actorId) {
         return;
     }
     
-    // تقسيم المسلسلات: أول 4 في الأعلى، الباقي في الأسفل
-    const topSeries = actorSeries.slice(0, 4);
-    const bottomSeries = actorSeries.slice(4);
+    // إنشاء مصفوفة من البطاقات مع بطاقة الأفلام
+    const allCards = [];
     
-    // إنشاء التصميم الجديد
+    // إضافة جميع المسلسلات
+    actorSeries.forEach(series => {
+        allCards.push({ type: 'series', data: series });
+    });
+    
+    // إضافة بطاقة الأفلام
+    allCards.push({ type: 'movie', cardNumber: 1 });
+    
+    // إنشاء HTML لجميع البطاقات الصغيرة
+    const cardsHTML = allCards.map(card => {
+        if (card.type === 'series') {
+            return createSmallSeriesCardHTML(card.data);
+        } else {
+            return createSmallMovieCardHTML(card.cardNumber);
+        }
+    }).join('');
+    
+    // عرض carousel بسيط مثل دوران الممثلين
     actorSeriesGrid.innerHTML = `
-        <div class="actor-series-section">
-            <!-- العرض العادي في الأعلى -->
-            <div class="actor-series-grid-top" id="actorSeriesTop">
-                ${topSeries.map(series => createActorSeriesCardHTML(series)).join('')}
+        <div class="series-carousel-container">
+            <div class="series-carousel-scroll">
+                ${cardsHTML}
             </div>
-            
-            <!-- العرض بالتمرير في الأسفل -->
-            ${bottomSeries.length > 0 ? `
-                <div class="actor-series-grid-bottom">
-                    <div class="actor-series-slider" id="actorSeriesSlider">
-                        ${bottomSeries.map((series, index) => createActorSeriesSlideHTML(series, index)).join('')}
-                        <!-- بطاقة موقع الأفلام -->
-                        <div class="actor-movies-site-card" onclick="window.open('https://id-preview--ade74e2d-9472-46b0-b859-05333b895cd2.lovable.app/', '_blank')">
-                            <div class="actor-movies-site-icon">
-                                <i class="fas fa-film"></i>
-                            </div>
-                            <h3 class="actor-movies-site-title">موقع الأفلام</h3>
-                            <p class="actor-movies-site-description">
-                                اكتشف عالماً من الأفلام الرومانسية والمثيرة
-                            </p>
-                            <div class="actor-movies-site-badge">أفلام أجنبية</div>
-                        </div>
-                    </div>
-                    
-                    <!-- أزرار التنقل -->
-                    <button class="actor-series-nav-btn prev" id="actorSeriesPrev" onclick="navigateActorSeries(-1)" style="display: none;">
-                        <i class="fas fa-chevron-right"></i>
-                    </button>
-                    <button class="actor-series-nav-btn next" id="actorSeriesNext" onclick="navigateActorSeries(1)" style="display: none;">
-                        <i class="fas fa-chevron-left"></i>
-                    </button>
-                </div>
-            ` : `
-                <!-- إذا لم توجد مسلسلات إضافية، اعرض بطاقة الموقع مباشرة -->
-                <div class="actor-series-grid-bottom" style="padding: 20px; display: flex; justify-content: center;">
-                    <div class="actor-movies-site-card" onclick="window.open('https://id-preview--ade74e2d-9472-46b0-b859-05333b895cd2.lovable.app/', '_blank')" style="flex: 0 0 400px; max-width: 400px;">
-                        <div class="actor-movies-site-icon">
-                            <i class="fas fa-film"></i>
-                        </div>
-                        <h3 class="actor-movies-site-title">موقع الأفلام</h3>
-                        <p class="actor-movies-site-description">
-                            اكتشف عالماً من الأفلام الرومانسية والمثيرة
-                        </p>
-                        <div class="actor-movies-site-badge">أفلام أجنبية</div>
-                    </div>
-                </div>
-            `}
         </div>
     `;
-    
-    // تفعيل التنقل باللمس والتمرير الأفقي
-    initializeHorizontalSlider();
 }
+
+// إنشاء بطاقة مسلسل صغيرة
+function createSmallSeriesCardHTML(series) {
+    const totalStars = typeof calculateTotalStars === 'function' ? calculateTotalStars(series.id) : 0;
+    
+    return `
+        <div class="small-series-card" onclick="closeActorModal(); setTimeout(() => openDetailsPage(${series.id}), 100);">
+            <div class="small-card-image-wrapper">
+                <img src="${series.image}" alt="${series.title}" class="small-card-image" onerror="this.src='https://via.placeholder.com/200x280/666666/ffffff?text=${encodeURIComponent(series.title)}'">
+                <div class="small-card-overlay">
+                    <h4 class="small-card-title">${series.title}</h4>
+                    <p class="small-card-year">${series.year}</p>
+                    <div class="small-card-rating">
+                        <i class="fas fa-star"></i> ${totalStars}
+                    </div>
+                </div>
+            </div>
+        </div>
+    `;
+}
+
+// إنشاء بطاقة الأفلام الصغيرة
+function createSmallMovieCardHTML(cardNumber) {
+    return `
+        <div class="small-series-card small-movie-card" onclick="window.open('https://askdiz-video-vault-23702.lovable.app/', '_blank');">
+            <div class="small-card-image-wrapper">
+                <img src="https://images.unsplash.com/photo-1478720568477-152d9b164e26?w=300&h=400&fit=crop" alt="موقع الأفلام" class="small-card-image">
+                <div class="small-card-overlay movie-overlay">
+                    <div class="movie-icon">
+                        <i class="fas fa-film"></i>
+                    </div>
+                    <h4 class="small-card-title">مواقع الأفلام</h4>
+                    <p class="small-card-subtitle">اكتشف المزيد</p>
+                </div>
+            </div>
+        </div>
+    `;
+}
+
+
 
 /**
  * إنشاء HTML لبطاقة مسلسل
@@ -1103,15 +1451,27 @@ function displayActorSeries(actorId) {
  * @returns {string} - HTML للبطاقة
  */
 function createActorSeriesCardHTML(series) {
+    const totalStars = typeof calculateTotalStars === 'function' ? calculateTotalStars(series.id) : 0;
+    
     return `
-        <div class="actor-series-card" onclick="closeActorModal(); setTimeout(() => openDetailsPage('${series.id}'), 100);">
-            <img src="${series.image}" alt="${series.title}" class="actor-series-image" onerror="this.src='https://via.placeholder.com/400x380/666666/ffffff?text=${encodeURIComponent(series.title)}'">
-            <div class="actor-series-info">
-                <h4 class="actor-series-title">${series.title}</h4>
-                <p class="actor-series-role">الدور: ${series.actorRole}</p>
-                <div class="actor-series-meta">
-                    <span><i class="fas fa-calendar-alt"></i> ${series.year}</span>
-                    <span style="margin-right: 10px;"><i class="fas fa-video"></i> ${series.episodes.length} حلقة</span>
+        <div class="series-card" onclick="closeActorModal(); setTimeout(() => openDetailsPage(${series.id}), 100);">
+            <div class="heart-shape-wrapper">
+                <div class="series-image-wrapper">
+                    <img src="${series.image}" alt="${series.title}" class="series-image" onerror="this.src='https://via.placeholder.com/400x380/666666/ffffff?text=${encodeURIComponent(series.title)}'">
+                    
+                    <span class="series-badge" style="background: var(--primary-light); color: var(--secondary); border: 2px solid var(--primary); font-size: 14px;">
+                        <i class="fas fa-star" style="color: var(--primary);"></i> ${totalStars} 
+                    </span>
+                    
+                    <div class="series-overlay">
+                        <h3 class="series-title">${series.title}</h3>
+                        <p class="series-title-en">${series.titleEn || ''}</p>
+                        <p class="actor-series-role" style="color: var(--primary-light); font-size: 13px; margin-top: 5px;">الدور: ${series.actorRole}</p>
+                        <div class="series-meta">
+                            <span class="meta-item"><i class="fas fa-video"></i> ${series.episodes.length} حلقة</span>
+                            <span class="meta-item"><i class="fas fa-calendar-alt"></i> ${series.year}</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1143,107 +1503,58 @@ function createActorSeriesSlideHTML(series, index) {
 }
 
 /**
- * تفعيل السلايدر الأفقي مثل نتفليكس
+ * تفعيل التمرير الأفقي لصفوف مسلسلات الممثلين
  */
-function initializeHorizontalSlider() {
-    const slider = document.getElementById('actorSeriesSlider');
-    if (!slider) return;
+function initializeActorSeriesRows() {
+    const rows = document.querySelectorAll('.actor-series-row');
     
-    let currentIndex = 0;
-    let isScrolling = false;
-    
-    // مراقبة التمرير وتحديث البطاقات النشطة
-    function updateActiveCards() {
-        const slides = slider.querySelectorAll('.actor-series-slide');
-        const containerWidth = slider.offsetWidth;
-        const scrollLeft = slider.scrollLeft;
-        const slideWidth = 280 + 15; // عرض البطاقة + الفجوة
+    rows.forEach((row, rowIndex) => {
+        const slider = row.querySelector('.actor-series-slider');
+        const prevBtn = row.querySelector('.actor-series-nav-btn.prev');
+        const nextBtn = row.querySelector('.actor-series-nav-btn.next');
         
-        slides.forEach((slide, index) => {
-            const slideStart = index * slideWidth;
-            const slideEnd = slideStart + 280;
-            const slideCenter = slideStart + 140;
+        if (!slider) return;
+        
+        // إخفاء/إظهار الأزرار بناءً على موضع التمرير
+        function updateNavButtons() {
+            const scrollLeft = slider.scrollLeft;
+            const maxScroll = slider.scrollWidth - slider.clientWidth;
             
-            // تحديد البطاقة النشطة بناءً على موضع التمرير
-            if (Math.abs(scrollLeft + containerWidth / 2 - slideCenter) < containerWidth / 2) {
-                slide.classList.add('active');
-                currentIndex = index;
-            } else {
-                slide.classList.remove('active');
+            if (prevBtn) {
+                prevBtn.style.display = scrollLeft > 10 ? 'flex' : 'none';
             }
-        });
-        
-        // إظهار/إخفاء أزرار التنقل
-        updateNavigationButtons();
-    }
-    
-    // أحداث التمرير
-    slider.addEventListener('scroll', () => {
-        if (!isScrolling) {
-            isScrolling = true;
-            requestAnimationFrame(() => {
-                updateActiveCards();
-                isScrolling = false;
-            });
-        }
-    });
-    
-    // تمرير سلس إلى البطاقة المحددة
-    function smoothScrollTo(index) {
-        const slideWidth = 280 + 15;
-        const targetScroll = index * slideWidth;
-        
-        slider.scrollTo({
-            left: targetScroll,
-            behavior: 'smooth'
-        });
-    }
-    
-    // جعل الدوال متاحة عالمياً
-    window.navigateActorSeries = function(direction) {
-        const slides = slider.querySelectorAll('.actor-series-slide');
-        if (slides.length === 0) return;
-        
-        let newIndex = currentIndex + direction;
-        newIndex = Math.max(0, Math.min(newIndex, slides.length - 1));
-        
-        if (newIndex !== currentIndex) {
-            currentIndex = newIndex;
-            smoothScrollTo(currentIndex);
-        }
-    };
-    
-    // مراقبة التحميل الأولي
-    setTimeout(updateActiveCards, 100);
-    
-    // تفعيل التمرير باللمس
-    let startX = 0;
-    let startY = 0;
-    let startTime = 0;
-    
-    slider.addEventListener('touchstart', (e) => {
-        startX = e.touches[0].clientX;
-        startY = e.touches[0].clientY;
-        startTime = Date.now();
-    });
-    
-    slider.addEventListener('touchend', (e) => {
-        const endX = e.changedTouches[0].clientX;
-        const endY = e.changedTouches[0].clientY;
-        const deltaX = endX - startX;
-        const deltaY = endY - startY;
-        const deltaTime = Date.now() - startTime;
-        
-        // التحقق من أن الحركة أفقية وسريعة
-        if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > 50 && deltaTime < 300) {
-            if (deltaX > 0) {
-                navigateActorSeries(-1); // تمرير لليمين
-            } else {
-                navigateActorSeries(1);  // تمرير لليسار
+            if (nextBtn) {
+                nextBtn.style.display = scrollLeft < maxScroll - 10 ? 'flex' : 'none';
             }
         }
+        
+        // مراقبة التمرير
+        slider.addEventListener('scroll', updateNavButtons);
+        
+        // التحديث الأولي
+        setTimeout(updateNavButtons, 100);
     });
 }
+
+/**
+ * تمرير صف معين من مسلسلات الممثل
+ */
+window.scrollActorRow = function(rowIndex, direction) {
+    const row = document.querySelector(`.actor-series-row[data-row-index="${rowIndex}"]`);
+    if (!row) return;
+    
+    const slider = row.querySelector('.actor-series-slider');
+    if (!slider) return;
+    
+    const scrollAmount = 350; // مقدار التمرير
+    const currentScroll = slider.scrollLeft;
+    const targetScroll = currentScroll + (scrollAmount * direction);
+    
+    slider.scrollTo({
+        left: targetScroll,
+        behavior: 'smooth'
+    });
+};
 
 /**
  * إنشاء بطاقة مسلسل الممثل (دالة محتفظ بها للتوافق)

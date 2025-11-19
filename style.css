@@ -885,6 +885,136 @@ nav {
     font-size: 13px; 
 }
 
+/* ========== تصميم البطاقات الترويجية ========== */
+
+.promo-card {
+    position: relative;
+    animation: promoGlow 3s ease-in-out infinite;
+}
+
+@keyframes promoGlow {
+    0%, 100% {
+        box-shadow: 0 8px 30px rgba(230, 0, 35, 0.3);
+    }
+    50% {
+        box-shadow: 0 8px 40px rgba(230, 0, 35, 0.6), 0 0 30px rgba(255, 215, 0, 0.4);
+    }
+}
+
+.promo-card:hover {
+    transform: translateY(-15px) scale(1.05);
+    box-shadow: 0 20px 60px rgba(230, 0, 35, 0.7), 0 0 40px rgba(255, 215, 0, 0.5);
+}
+
+.promo-card .heart-shape-wrapper {
+    border: 2px solid var(--primary);
+    background: linear-gradient(135deg, rgba(230, 0, 35, 0.05) 0%, var(--bg-card) 100%);
+}
+
+.promo-image {
+    filter: brightness(0.6) saturate(1.3);
+    transition: all 0.5s ease;
+}
+
+.promo-card:hover .promo-image {
+    filter: brightness(0.8) saturate(1.5);
+    transform: scale(1.15);
+}
+
+.promo-badge {
+    animation: badgePulse 2s ease-in-out infinite;
+}
+
+@keyframes badgePulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+.promo-overlay {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 0%, rgba(230, 0, 35, 0.3) 100%);
+    padding: 25px 20px !important;
+}
+
+.promo-icon {
+    font-size: 40px;
+    color: var(--primary);
+    margin-bottom: 10px;
+    animation: iconFloat 3s ease-in-out infinite;
+}
+
+@keyframes iconFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.promo-description {
+    color: var(--text-light);
+    font-size: 14px;
+    margin: 10px 0;
+    font-weight: 500;
+}
+
+.promo-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(135deg, var(--primary) 0%, #ff6b00 100%);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 700;
+    margin-top: 10px;
+    box-shadow: 0 4px 15px rgba(230, 0, 35, 0.4);
+    transition: all 0.3s ease;
+}
+
+.promo-card:hover .promo-cta {
+    transform: translateX(-5px);
+    box-shadow: 0 6px 20px rgba(230, 0, 35, 0.6);
+}
+
+/* تصميم متجاوب للبطاقات الترويجية */
+@media (max-width: 768px) {
+    .promo-icon {
+        font-size: 35px;
+    }
+    
+    .promo-description {
+        font-size: 13px;
+    }
+    
+    .promo-cta {
+        font-size: 13px;
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .promo-icon {
+        font-size: 30px;
+    }
+    
+    .promo-description {
+        font-size: 12px;
+    }
+    
+    .promo-cta {
+        font-size: 12px;
+        padding: 7px 14px;
+    }
+}
+
+/* ========== نهاية تصميم البطاقات الترويجية ========== */
+
 .series-badge {
     background: var(--primary-light);
     color: var(--secondary);
@@ -2288,6 +2418,7 @@ nav {
 
 /* أزرار التنقل للتمرير */
 .actor-series-nav-btn {
+    display: none !important;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -2526,3 +2657,1558 @@ nav {
         height: 100px;
     }
 }
+
+/* ===============================
+   تصميمات محدثة لمسلسلات الممثلين - التحديث النهائي
+   =============================== */
+
+/* صف مسلسلات الممثل */
+.actor-series-row {
+    position: relative;
+    width: 100%;
+    margin-bottom: 30px;
+    padding: 20px 0;
+}
+
+/* تحديث السلايدر */
+.actor-series-row .actor-series-slider {
+    display: flex !important;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 10px 0;
+    width: 100%;
+    justify-content: flex-start;
+    min-height: auto !important;
+}
+
+/* ========== نظام Carousel البسيط للبطاقات (مثل الممثلين) ========== */
+
+.series-carousel-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+.series-carousel-scroll {
+    display: flex;
+    gap: 15px;
+    padding: 10px 5px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary) transparent;
+}
+
+.series-carousel-scroll::-webkit-scrollbar {
+    height: 8px;
+}
+
+.series-carousel-scroll::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 4px;
+}
+
+.series-carousel-scroll::-webkit-scrollbar-thumb {
+    background: var(--primary);
+    border-radius: 4px;
+}
+
+.series-carousel-scroll::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-light);
+}
+
+/* البطاقات الصغيرة */
+.small-series-card {
+    flex: 0 0 160px;
+    min-width: 160px;
+    height: 240px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.small-series-card:hover {
+    transform: translateY(-10px) scale(1.05);
+}
+
+.small-card-image-wrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.small-card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.small-series-card:hover .small-card-image {
+    transform: scale(1.1);
+}
+
+.small-card-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.6) 70%, transparent 100%);
+    padding: 15px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.small-card-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: white;
+    margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.small-card-year {
+    font-size: 11px;
+    color: var(--text-gray);
+    margin: 0;
+}
+
+.small-card-rating {
+    font-size: 12px;
+    color: var(--primary-light);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.small-card-rating i {
+    color: var(--primary);
+}
+
+/* بطاقة الأفلام الصغيرة */
+.small-movie-card .small-card-overlay {
+    background: linear-gradient(135deg, rgba(230, 0, 35, 0.3) 0%, rgba(0, 0, 0, 0.9) 100%);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px 10px;
+}
+
+.small-movie-card:hover {
+    transform: translateY(-10px) scale(1.08);
+    box-shadow: 0 10px 30px rgba(230, 0, 35, 0.5);
+}
+
+.movie-icon {
+    font-size: 40px;
+    color: var(--primary);
+    margin-bottom: 10px;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.small-card-subtitle {
+    font-size: 11px;
+    color: var(--primary-light);
+    margin: 0;
+    font-weight: 600;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.8;
+    }
+}
+
+/* تصميم متجاوب */
+@media (max-width: 768px) {
+    .small-series-card {
+        flex: 0 0 140px;
+        min-width: 140px;
+        height: 210px;
+    }
+    
+    .small-card-title {
+        font-size: 13px;
+    }
+    
+    .movie-icon {
+        font-size: 35px;
+    }
+}
+
+@media (max-width: 480px) {
+    .small-series-card {
+        flex: 0 0 120px;
+        min-width: 120px;
+        height: 180px;
+    }
+    
+    .small-card-title {
+        font-size: 12px;
+    }
+    
+    .small-card-year {
+        font-size: 10px;
+    }
+    
+    .small-card-rating {
+        font-size: 11px;
+    }
+    
+    .movie-icon {
+        font-size: 30px;
+    }
+    
+    .series-carousel-scroll {
+        gap: 10px;
+    }
+}
+
+/* ========== نهاية نظام Carousel البسيط ========== */
+
+
+/* بطاقات المسلسلات في صف الممثل - حجم متوسط ومتناسق */
+.actor-series-row .series-card {
+    flex: 0 0 220px !important;
+    width: 220px !important;
+    min-width: 220px !important;
+    max-width: 220px !important;
+    min-height: 330px !important;
+    margin-bottom: 20px;
+}
+
+/* بطاقة موقع الأفلام الاحترافية */
+.actor-movies-card {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.actor-movies-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(230, 0, 35, 0.3) 0%, rgba(255, 215, 0, 0.3) 100%);
+    z-index: 2;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.actor-movies-card:hover::before {
+    opacity: 1;
+}
+
+.actor-movies-card:hover {
+    transform: translateY(-15px) scale(1.05);
+    box-shadow: 0 20px 60px rgba(230, 0, 35, 0.5);
+}
+
+.actor-movies-card .series-image {
+    filter: brightness(0.6);
+    transition: all 0.5s ease;
+}
+
+.actor-movies-card:hover .series-image {
+    filter: brightness(0.8) saturate(1.2);
+    transform: scale(1.1);
+}
+
+.actor-movies-card .series-overlay {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.7) 50%, transparent 100%);
+}
+
+.actor-movies-card .series-title {
+    font-size: 22px !important;
+    font-weight: 900 !important;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9);
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9), 0 0 10px rgba(255, 215, 0, 0.5);
+    }
+    to {
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9), 0 0 20px rgba(255, 215, 0, 0.8);
+    }
+}
+
+/* تحديث أزرار التنقل */
+.actor-series-row .actor-series-nav-btn {
+    display: none !important;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: var(--text-light);
+    border: 2px solid var(--primary);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 20;
+    transition: all 0.3s ease;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    backdrop-filter: blur(10px);
+}
+
+.actor-series-row .actor-series-nav-btn:hover {
+    background: var(--primary);
+    color: var(--text-light);
+    transform: translateY(-50%) scale(1.15);
+    box-shadow: 0 8px 25px rgba(230, 0, 35, 0.4);
+}
+
+.actor-series-row .actor-series-nav-btn:active {
+    transform: translateY(-50%) scale(0.95);
+}
+
+.actor-series-row .actor-series-nav-btn.prev {
+    right: 5px;
+}
+
+.actor-series-row .actor-series-nav-btn.next {
+    left: 5px;
+}
+
+/* إخفاء العناصر القديمة */
+.actor-series-grid-top,
+.actor-series-grid-bottom,
+.actor-series-slide,
+.actor-movies-site-card {
+    display: none !important;
+}
+
+/* استجابة للشاشات الصغيرة */
+@media (max-width: 768px) {
+    .actor-series-row .actor-series-slider {
+        padding: 10px 0;
+        gap: 15px;
+    }
+    
+    .actor-series-row .series-card {
+        flex: 0 0 200px !important;
+        width: 200px !important;
+        min-width: 200px !important;
+        max-width: 200px !important;
+        min-height: 300px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .actor-series-row .actor-series-slider {
+        padding: 10px 0;
+        gap: 12px;
+    }
+    
+    .actor-series-row .series-card {
+        flex: 0 0 180px !important;
+        width: 180px !important;
+        min-width: 180px !important;
+        max-width: 180px !important;
+        min-height: 270px !important;
+    }
+}
+
+
+/* ========== تعديلات صفحة مسلسلات الممثلين ========== */
+
+/* منع تمرير الصفحة أفقياً - فقط البطاقات تتحرك */
+body {
+    overflow-x: hidden;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+.actor-modal-content {
+    overflow-x: hidden;
+}
+
+/* تصميم محدث لصفحة مسلسلات الممثلين */
+.actor-series-section {
+    margin-bottom: 30px;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.actor-series-section-title {
+    color: var(--primary-light);
+    font-size: 22px;
+    font-weight: 700;
+    margin: 25px 0 15px 0;
+    text-align: center;
+    padding: 0 10px;
+}
+
+/* صف مسلسلات الممثل */
+.actor-series-row {
+    position: relative;
+    width: 100%;
+    margin-bottom: 30px;
+    padding: 20px 0;
+    overflow-x: hidden;
+}
+
+/* سلايدر المسلسلات في كل صف */
+.actor-series-slider {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 10px 0;
+    width: 100%;
+    justify-content: flex-start;
+}
+
+
+
+/* بطاقات المسلسلات في صف الممثل - حجم متوسط ومتناسق */
+.actor-series-slider .series-card {
+    flex: 0 0 220px;
+    width: 220px;
+    min-width: 220px;
+    max-width: 220px;
+    min-height: 330px;
+    margin-bottom: 20px;
+}
+
+/* بطاقة موقع الأفلام الاحترافية */
+.actor-movies-card {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.actor-movies-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(230, 0, 35, 0.3) 0%, rgba(255, 215, 0, 0.3) 100%);
+    z-index: 2;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.actor-movies-card:hover::before {
+    opacity: 1;
+}
+
+.actor-movies-card:hover {
+    transform: translateY(-15px) scale(1.05);
+    box-shadow: 0 20px 60px rgba(230, 0, 35, 0.5);
+}
+
+.actor-movies-card .series-image {
+    filter: brightness(0.6);
+    transition: all 0.5s ease;
+}
+
+.actor-movies-card:hover .series-image {
+    filter: brightness(0.8) saturate(1.2);
+    transform: scale(1.1);
+}
+
+.actor-movies-card .series-overlay {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.7) 50%, transparent 100%);
+}
+
+.actor-movies-card .series-title {
+    font-size: 22px;
+    font-weight: 900;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9);
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9), 0 0 10px rgba(255, 215, 0, 0.5);
+    }
+    to {
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9), 0 0 20px rgba(255, 215, 0, 0.8);
+    }
+}
+
+/* أزرار التنقل للتمرير */
+.actor-series-nav-btn {
+    display: none !important;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: var(--text-light);
+    border: 2px solid var(--primary);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 20;
+    transition: all 0.3s ease;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    backdrop-filter: blur(10px);
+}
+
+.actor-series-nav-btn:hover {
+    background: var(--primary);
+    color: var(--text-light);
+    transform: translateY(-50%) scale(1.15);
+    box-shadow: 0 8px 25px rgba(230, 0, 35, 0.4);
+}
+
+.actor-series-nav-btn:active {
+    transform: translateY(-50%) scale(0.95);
+}
+
+.actor-series-nav-btn.prev {
+    right: 5px;
+}
+
+.actor-series-nav-btn.next {
+    left: 5px;
+}
+
+.actor-series-nav-btn:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+    transform: translateY(-50%) scale(0.8);
+}
+
+/* إخفاء التصاميم القديمة */
+.actor-series-grid-top,
+.actor-series-grid-bottom,
+.actor-series-slide,
+.actor-movies-site-card,
+.actor-movies-site-icon,
+.actor-movies-site-title,
+.actor-movies-site-description,
+.actor-movies-site-badge {
+    display: none !important;
+}
+
+/* إعدادات استجابة للشاشات الصغيرة */
+@media (max-width: 768px) {
+    .actor-series-slider {
+        padding: 10px 0;
+        gap: 15px;
+    }
+    
+    .actor-series-slider .series-card {
+        flex: 0 0 250px;
+        min-width: 250px;
+        min-height: 320px;
+    }
+}
+
+@media (max-width: 480px) {
+    .actor-series-slider {
+        padding: 10px 0;
+        gap: 12px;
+    }
+    
+    .actor-series-slider .series-card {
+        flex: 0 0 200px;
+        min-width: 200px;
+        min-height: 280px;
+    }
+}
+
+
+/* ================================================= */
+/* زر العودة إلى الأعلى - Scroll to Top Button      */
+/* ================================================= */
+
+#scrollToTopBtn {
+    position: fixed;
+    bottom: 80px; /* رفع الزر للأعلى */
+    right: 30px;
+    width: 55px;
+    height: 55px;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+    color: var(--text-light);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    z-index: 9999;
+    box-shadow: 0 8px 25px rgba(230, 0, 35, 0.4), 
+                0 0 20px rgba(255, 215, 0, 0.3),
+                inset 0 -2px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    font-size: 24px;
+    animation: slideInFromBottom 0.5s ease-out, pulseGlow 2s ease-in-out infinite;
+}
+
+#scrollToTopBtn:hover {
+    transform: translateY(-5px) scale(1.1);
+    box-shadow: 0 15px 40px rgba(230, 0, 35, 0.6), 
+                0 0 35px rgba(255, 215, 0, 0.5),
+                inset 0 -2px 10px rgba(0, 0, 0, 0.4);
+    background: linear-gradient(135deg, var(--primary-light) 0%, var(--primary) 100%);
+}
+
+#scrollToTopBtn:active {
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 10px 30px rgba(230, 0, 35, 0.5), 
+                0 0 25px rgba(255, 215, 0, 0.4);
+}
+
+#scrollToTopBtn i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: arrowBounce 1.5s ease-in-out infinite;
+}
+
+/* حركة ظهور الزر من الأسفل */
+@keyframes slideInFromBottom {
+    from {
+        bottom: -70px;
+        opacity: 0;
+    }
+    to {
+        bottom: 80px; /* متوافق مع الموضع الجديد */
+        opacity: 1;
+    }
+}
+
+/* حركة توهج نابضة للزر */
+@keyframes pulseGlow {
+    0%, 100% {
+        box-shadow: 0 8px 25px rgba(230, 0, 35, 0.4), 
+                    0 0 20px rgba(255, 215, 0, 0.3),
+                    inset 0 -2px 10px rgba(0, 0, 0, 0.3);
+    }
+    50% {
+        box-shadow: 0 10px 35px rgba(230, 0, 35, 0.6), 
+                    0 0 30px rgba(255, 215, 0, 0.5),
+                    inset 0 -2px 10px rgba(0, 0, 0, 0.3);
+    }
+}
+
+/* حركة السهم للأعلى */
+@keyframes arrowBounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+/* استجابة للشاشات الصغيرة */
+@media (max-width: 768px) {
+    #scrollToTopBtn {
+        width: 50px;
+        height: 50px;
+        bottom: 70px; /* رفع الزر للأعلى */
+        right: 20px;
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 480px) {
+    #scrollToTopBtn {
+        width: 45px;
+        height: 45px;
+        bottom: 60px; /* رفع الزر للأعلى */
+        right: 15px;
+        font-size: 20px;
+    }
+}
+
+
+/* ═══════════════════════════════════════════════════════
+   أنماط ترويجات المشغلات - Player Promotions Styles
+   ═══════════════════════════════════════════════════════ */
+
+/* 1. Pre-Roll Promo (ترويج قبل بدء التشغيل) */
+.preroll-promo-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.preroll-promo-overlay.active {
+    opacity: 1;
+}
+
+.preroll-promo-content {
+    max-width: 600px;
+    width: 90%;
+    position: relative;
+    text-align: center;
+}
+
+.preroll-video-container {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 20px;
+    padding: 60px 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+.preroll-gradient-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(230, 0, 35, 0.2) 0%, rgba(255, 215, 0, 0.1) 100%);
+    opacity: 0.5;
+}
+
+.preroll-icon {
+    font-size: 80px;
+    color: #fff;
+    margin-bottom: 20px;
+    animation: prerollIconPulse 2s ease-in-out infinite;
+}
+
+/* صورة Pre-Roll الترويجية */
+.preroll-image-container {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.preroll-promo-image {
+    max-width: 100%;
+    max-height: 300px;
+    width: auto;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    animation: prerollImageFloat 3s ease-in-out infinite;
+    object-fit: contain;
+}
+
+@keyframes prerollImageFloat {
+    0%, 100% { 
+        transform: translateY(0px) scale(1); 
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    }
+    50% { 
+        transform: translateY(-10px) scale(1.02); 
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+    }
+}
+
+@keyframes prerollIconPulse {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.1); opacity: 0.8; }
+}
+
+.preroll-title {
+    font-size: 32px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 15px;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.preroll-description {
+    font-size: 18px;
+    color: #f0f0f0;
+    margin-bottom: 30px;
+}
+
+.preroll-cta-btn {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+    color: #fff;
+    border: none;
+    padding: 15px 40px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 20px rgba(230, 0, 35, 0.4);
+    margin-bottom: 20px;
+}
+
+.preroll-cta-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(230, 0, 35, 0.6);
+}
+
+.preroll-skip-container {
+    margin-top: 20px;
+}
+
+.preroll-skip-btn {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    padding: 12px 30px;
+    font-size: 16px;
+    border-radius: 30px;
+    cursor: not-allowed;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.preroll-skip-btn:disabled {
+    opacity: 0.6;
+}
+
+.preroll-skip-btn.can-skip {
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.6);
+}
+
+.preroll-skip-btn.can-skip:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+}
+
+.preroll-timer-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.2);
+    overflow: hidden;
+}
+
+.preroll-timer-fill {
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary) 0%, var(--primary-light) 100%);
+    transition: width 5s linear;
+}
+
+/* 2. Mid-Roll Banner (بانر أثناء المشاهدة) */
+.midroll-promo-banner {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: linear-gradient(135deg, rgba(230, 0, 35, 0.95) 0%, rgba(255, 140, 0, 0.95) 100%);
+    border-radius: 12px;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    z-index: 100;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    max-width: 400px;
+}
+
+.midroll-promo-banner.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.midroll-content {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex: 1;
+}
+
+.midroll-icon {
+    font-size: 32px;
+    color: #fff;
+    animation: midrollIconSpin 3s linear infinite;
+}
+
+@keyframes midrollIconSpin {
+    0%, 100% { transform: rotate(0deg); }
+    50% { transform: rotate(10deg); }
+}
+
+.midroll-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.midroll-text strong {
+    font-size: 16px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.midroll-text span {
+    font-size: 13px;
+    color: #f0f0f0;
+}
+
+.midroll-btn {
+    background: #fff;
+    color: var(--primary);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.midroll-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
+}
+
+.midroll-close {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.midroll-close:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: rotate(90deg);
+}
+
+/* 3. Player Overlay Promo (شريط صغير أثناء المشاهدة) */
+.player-overlay-promo {
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    transform: translateX(-50%) translateY(100px);
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.95) 0%, rgba(118, 75, 162, 0.95) 100%);
+    border-radius: 50px;
+    padding: 12px 25px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    z-index: 99;
+    opacity: 0;
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(15px);
+}
+
+.player-overlay-promo.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+.player-overlay-content {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.overlay-text {
+    color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.overlay-text i {
+    font-size: 20px;
+}
+
+.overlay-cta {
+    background: #fff;
+    color: #667eea;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.overlay-cta:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
+}
+
+.overlay-close {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: #fff;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+}
+
+.overlay-close:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: rotate(90deg);
+}
+
+/* 4. Post-Roll Promo (ترويج بعد الانتهاء) */
+.postroll-promo-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.postroll-promo-overlay.active {
+    opacity: 1;
+}
+
+.postroll-promo-content {
+    background: linear-gradient(135deg, #1e1e1e 0%, #2a2a2a 100%);
+    border-radius: 20px;
+    padding: 50px 40px;
+    max-width: 500px;
+    width: 90%;
+    text-align: center;
+    position: relative;
+    border: 2px solid rgba(230, 0, 35, 0.3);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+}
+
+.postroll-icon {
+    font-size: 70px;
+    color: var(--primary);
+    margin-bottom: 20px;
+    animation: postrollIconBounce 1s ease-in-out infinite;
+}
+
+@keyframes postrollIconBounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.postroll-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.postroll-description {
+    font-size: 16px;
+    color: #b0b0b0;
+    margin-bottom: 30px;
+}
+
+.postroll-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.postroll-cta {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+    color: #fff;
+    border: none;
+    padding: 15px 35px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 20px rgba(230, 0, 35, 0.4);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.postroll-cta:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(230, 0, 35, 0.6);
+}
+
+.postroll-close-btn {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    padding: 15px 35px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.postroll-close-btn:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+}
+
+/* Responsive للترويجات */
+@media (max-width: 768px) {
+    .midroll-promo-banner {
+        top: 10px;
+        right: 10px;
+        left: 10px;
+        max-width: none;
+        padding: 12px 15px;
+    }
+    
+    .midroll-text strong {
+        font-size: 14px;
+    }
+    
+    .midroll-text span {
+        font-size: 12px;
+    }
+    
+    .midroll-btn {
+        padding: 8px 15px;
+        font-size: 13px;
+    }
+    
+    .player-overlay-promo {
+        bottom: 70px;
+        left: 10px;
+        right: 10px;
+        transform: none;
+        border-radius: 15px;
+    }
+    
+    .player-overlay-promo.show {
+        transform: none;
+    }
+    
+    .overlay-text {
+        font-size: 13px;
+    }
+    
+    .preroll-title {
+        font-size: 24px;
+    }
+    
+    .preroll-description {
+        font-size: 16px;
+    }
+    
+    .preroll-video-container {
+        padding: 40px 25px;
+    }
+    
+    .preroll-promo-image {
+        max-height: 250px;
+    }
+    
+    .postroll-title {
+        font-size: 24px;
+    }
+    
+    .postroll-buttons {
+        flex-direction: column;
+    }
+    
+    .postroll-cta,
+    .postroll-close-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .preroll-icon {
+        font-size: 60px;
+    }
+    
+    .preroll-promo-image {
+        max-height: 200px;
+        border-radius: 10px;
+    }
+    
+    .preroll-title {
+        font-size: 20px;
+    }
+    
+    .preroll-description {
+        font-size: 14px;
+    }
+    
+    .preroll-cta-btn {
+        padding: 12px 30px;
+        font-size: 16px;
+    }
+    
+    .midroll-icon {
+        font-size: 24px;
+    }
+    
+    .overlay-text {
+        font-size: 12px;
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    .postroll-icon {
+        font-size: 50px;
+    }
+    
+    .postroll-promo-content {
+        padding: 35px 25px;
+    }
+}
+
+
+/* ===============================
+   تصميم صفحة الممثلين الرئيسية
+   =============================== */
+
+.all-actors-container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* صف الممثلين */
+.actors-row {
+    position: relative;
+    margin-bottom: 40px;
+    padding: 10px 0;
+}
+
+.actors-row-scroll {
+    display: flex;
+    gap: 25px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary) rgba(255, 255, 255, 0.1);
+    padding: 15px 5px;
+    cursor: grab;
+    user-select: none;
+}
+
+.actors-row-scroll:active {
+    cursor: grabbing;
+}
+
+.actors-row-scroll::-webkit-scrollbar {
+    height: 10px;
+}
+
+.actors-row-scroll::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+}
+
+.actors-row-scroll::-webkit-scrollbar-thumb {
+    background: linear-gradient(90deg, var(--primary), var(--primary-light));
+    border-radius: 10px;
+    border: 2px solid var(--bg-card);
+}
+
+.actors-row-scroll::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(90deg, var(--primary-light), var(--primary));
+}
+
+/* بطاقة الممثل الجديدة */
+.actor-card-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 20px 15px;
+    border-radius: 25px;
+    background: linear-gradient(135deg, var(--bg-card) 0%, rgba(var(--primary-rgb), 0.08) 100%);
+    border: 3px solid transparent;
+    min-width: 160px;
+    max-width: 160px;
+    flex-shrink: 0;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    position: relative;
+    overflow: hidden;
+}
+
+.actor-card-main::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, transparent 0%, rgba(var(--primary-rgb), 0.1) 100%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: 0;
+}
+
+.actor-card-main:hover::before {
+    opacity: 1;
+}
+
+.actor-card-main:hover {
+    transform: translateY(-12px) scale(1.08);
+    box-shadow: 0 20px 50px rgba(var(--primary-rgb), 0.35);
+    border-color: var(--primary);
+}
+
+/* صورة الممثل */
+.actor-card-main .actor-avatar-main {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid var(--primary);
+    margin-bottom: 15px;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 1;
+}
+
+.actor-card-main:hover .actor-avatar-main {
+    border-color: var(--primary-light);
+    box-shadow: 0 10px 35px rgba(var(--primary-rgb), 0.6);
+    transform: scale(1.1) rotate(5deg);
+}
+
+/* اسم الممثل */
+.actor-card-main .actor-name-main {
+    color: var(--text-primary);
+    font-size: 15px;
+    font-weight: 800;
+    margin: 0 0 5px 0;
+    line-height: 1.3;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 1;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+/* الاسم بالإنجليزية */
+.actor-card-main .actor-name-en {
+    color: var(--primary-light);
+    font-size: 12px;
+    margin: 0;
+    font-style: italic;
+    font-weight: 600;
+    opacity: 0.9;
+    position: relative;
+    z-index: 1;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* تأثيرات إضافية عند التمرير */
+.actor-card-main::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(var(--primary-rgb), 0.15) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: 0;
+}
+
+.actor-card-main:hover::after {
+    opacity: 1;
+}
+
+/* تصميم متجاوب */
+@media (max-width: 1200px) {
+    .all-actors-container {
+        padding: 0 15px;
+    }
+    
+    .actors-row-scroll {
+        gap: 20px;
+    }
+    
+    .actor-card-main {
+        min-width: 145px;
+        max-width: 145px;
+        padding: 18px 12px;
+    }
+    
+    .actor-card-main .actor-avatar-main {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media (max-width: 768px) {
+    .all-actors-container {
+        padding: 0 10px;
+    }
+    
+    .actors-row {
+        margin-bottom: 30px;
+    }
+    
+    .actors-row-scroll {
+        gap: 15px;
+        padding: 12px 3px;
+    }
+    
+    .actor-card-main {
+        min-width: 130px;
+        max-width: 130px;
+        padding: 15px 10px;
+        border-radius: 20px;
+    }
+    
+    .actor-card-main .actor-avatar-main {
+        width: 85px;
+        height: 85px;
+        border-width: 4px;
+    }
+    
+    .actor-card-main .actor-name-main {
+        font-size: 13px;
+    }
+    
+    .actor-card-main .actor-name-en {
+        font-size: 11px;
+    }
+    
+    .actor-card-main:hover {
+        transform: translateY(-8px) scale(1.05);
+    }
+}
+
+@media (max-width: 480px) {
+    .all-actors-container {
+        padding: 0 5px;
+    }
+    
+    .actors-row {
+        margin-bottom: 25px;
+    }
+    
+    .actors-row-scroll {
+        gap: 12px;
+        padding: 10px 2px;
+    }
+    
+    .actor-card-main {
+        min-width: 115px;
+        max-width: 115px;
+        padding: 12px 8px;
+        border-radius: 18px;
+    }
+    
+    .actor-card-main .actor-avatar-main {
+        width: 75px;
+        height: 75px;
+        border-width: 3px;
+    }
+    
+    .actor-card-main .actor-name-main {
+        font-size: 12px;
+    }
+    
+    .actor-card-main .actor-name-en {
+        font-size: 10px;
+    }
+    
+    .actors-row-scroll::-webkit-scrollbar {
+        height: 6px;
+    }
+}
+
+/* أنيميشن ظهور البطاقات */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.actor-card-main {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+/* تأخير الأنيميشن لكل بطاقة */
+.actor-card-main:nth-child(1) { animation-delay: 0.05s; }
+.actor-card-main:nth-child(2) { animation-delay: 0.1s; }
+.actor-card-main:nth-child(3) { animation-delay: 0.15s; }
+.actor-card-main:nth-child(4) { animation-delay: 0.2s; }
+.actor-card-main:nth-child(5) { animation-delay: 0.25s; }
+.actor-card-main:nth-child(6) { animation-delay: 0.3s; }
+.actor-card-main:nth-child(7) { animation-delay: 0.35s; }
+.actor-card-main:nth-child(8) { animation-delay: 0.4s; }
+.actor-card-main:nth-child(9) { animation-delay: 0.45s; }
+.actor-card-main:nth-child(10) { animation-delay: 0.5s; }

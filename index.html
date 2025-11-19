@@ -8,7 +8,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     
+    <!-- منع التخزين المؤقت -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="promotions.css">
 </head>
 <body>
     
@@ -46,6 +52,7 @@
                 
                 <a href="#home" id="navHome" data-section="series" onclick="switchSection('series'); closeNav();"><i class="fas fa-home"></i> الرئيسية</a>
                 <a href="#series" id="navSeries" data-section="series" onclick="switchSection('series'); closeNav();"><i class="fas fa-tv"></i> المسلسلات</a>
+                <a href="#actors" id="navActors" data-section="actors" onclick="switchSection('actors'); closeNav();"><i class="fas fa-users"></i> الممثلين</a>
                 <a href="#" id="navNewSeries" onclick="renderNewSeries();"><i class="fas fa-fire"></i> الجديد</a>
                 <a href="#" id="navMostWatched" onclick="renderMostWatchedSeries();"><i class="fas fa-star"></i> الأكثر مشاهدة</a>
                 <a href="#" id="favoritesNavBtn" onclick="checkAuthAndRenderFavorites();"><i class="fas fa-heart-circle"></i> المفضلة</a>
@@ -93,6 +100,14 @@
                 <i class="fas fa-plus-circle"></i>
                 تصفح المزيد من المسلسلات
             </button>
+        </div>
+    </section>
+
+    <!-- قسم الممثلين -->
+    <section class="container" id="actors" style="display: none;">
+        <h2 class="section-title"><i class="fas fa-users"></i> جميع الممثلين</h2>
+        <div class="all-actors-container" id="allActorsContainer">
+            <!-- سيتم ملء الممثلين هنا بواسطة JavaScript -->
         </div>
     </section>
 
@@ -286,6 +301,7 @@
     <script src="auth.js"></script>
     <script src="actors_data.js"></script>
     <script src="app.js"></script>
+    <script src="promotions.js"></script>
     
     <!-- شريط حقوق الطبع والنشر -->
     <div class="footer-bar">

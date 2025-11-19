@@ -661,12 +661,6 @@ const actorsInSeries = {
     
     // مسلسل الخليفة (ID: 5)
     5: [
-        { actorId: "Çağatay_Ulusoy", roleName: "أشرف" },
-        { actorId: "Demet_Özdemir", roleName: "نيسان" },
-        { actorId: "Necip_Memili", roleName:" جوردال" },
-        { actorId: "Büşra_Develi", roleName: "شيدام" },
-        { actorId: "Tolga_Tekin", roleName: "مسلم" },
-        { actorId: "Ahmet_Rıfat_Şungar", roleName: "فاروق" },
         { actorId: "Macit_Koper", roleName: "الأب يعقوب" },
         { actorId: "Ceren_Benderlioğlu", roleName: "إيرماك" }
         
@@ -676,25 +670,15 @@ const actorsInSeries = {
     6: [
         { actorId: "Çağatay_Ulusoy", roleName: "أشرف" },
         { actorId: "Demet_Özdemir", roleName: "نيسان" },
-        { actorId: "Necip_Memili", roleName:" جوردال" },
-        { actorId: "Büşra_Develi", roleName: "شيدام" },
-        { actorId: "Tolga_Tekin", roleName: "مسلم" },
-        { actorId: "Ahmet_Rıfat_Şungar", roleName: "فاروق" },
-        { actorId: "Macit_Koper", roleName: "الأب يعقوب" },
-        { actorId: "Ceren_Benderlioğlu", roleName: "إيرماك" }
+        { actorId: "Necip_Memili", roleName:" جوردال" }
         
     ],
     
     // مسلسل ميرا وسليم (ID: 7)
     7: [
-        { actorId: "Çağatay_Ulusoy", roleName: "أشرف" },
-        { actorId: "Demet_Özdemir", roleName: "نيسان" },
         { actorId: "Necip_Memili", roleName:" جوردال" },
         { actorId: "Büşra_Develi", roleName: "شيدام" },
         { actorId: "Tolga_Tekin", roleName: "مسلم" },
-        { actorId: "Ahmet_Rıfat_Şungar", roleName: "فاروق" },
-        { actorId: "Macit_Koper", roleName: "الأب يعقوب" },
-        { actorId: "Ceren_Benderlioğlu", roleName: "إيرماك" }
         
     ]
 };

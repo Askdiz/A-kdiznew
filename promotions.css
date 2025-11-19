@@ -1,0 +1,749 @@
+/* ═══════════════════════════════════════════════════════
+   تصميم نظام الترويجات - Promotions Styling
+   ═══════════════════════════════════════════════════════ */
+
+/* --- 1. القلب النابض العائم --- */
+.floating-heart-promo {
+    position: fixed;
+    z-index: 9999;
+    cursor: pointer;
+    opacity: 0;
+    transform: scale(0) rotate(-30deg);
+    transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    filter: drop-shadow(0 10px 30px rgba(230, 0, 35, 0.6));
+}
+
+.floating-heart-promo.show {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+}
+
+.floating-heart-promo.hide {
+    opacity: 0;
+    transform: scale(0) rotate(30deg);
+}
+
+.floating-heart-promo.clicked {
+    animation: heartExplode 0.4s ease-out;
+}
+
+.heart-promo-content {
+    background: linear-gradient(135deg, #ff0844 0%, #ffb199 100%);
+    padding: 20px 25px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 15px 40px rgba(230, 0, 35, 0.4);
+    position: relative;
+    overflow: hidden;
+}
+
+.heart-promo-content::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    animation: shimmer 3s infinite;
+}
+
+.heart-icon {
+    font-size: 40px;
+    color: white;
+    animation: heartbeat 1.5s ease-in-out infinite;
+}
+
+.heart-icon i {
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+}
+
+.heart-text {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.heart-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: white;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.heart-subtitle {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.95);
+    font-weight: 500;
+}
+
+.heart-sparkles {
+    display: flex;
+    gap: 8px;
+    font-size: 20px;
+}
+
+.heart-sparkles span {
+    animation: sparkle 1.5s ease-in-out infinite;
+    display: inline-block;
+}
+
+.heart-sparkles span:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.heart-sparkles span:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+.heart-sparkles span:nth-child(3) {
+    animation-delay: 1s;
+}
+
+.mini-heart {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    color: #ff0844;
+    pointer-events: none;
+    animation: flyAway 1s ease-out forwards;
+    opacity: 1;
+}
+
+@keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+    25% {
+        transform: scale(1.2);
+    }
+    50% {
+        transform: scale(1);
+    }
+    75% {
+        transform: scale(1.15);
+    }
+}
+
+@keyframes sparkle {
+    0%, 100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.4;
+        transform: scale(1.3);
+    }
+}
+
+@keyframes shimmer {
+    0% {
+        transform: translateX(-100%) translateY(-100%) rotate(45deg);
+    }
+    100% {
+        transform: translateX(100%) translateY(100%) rotate(45deg);
+    }
+}
+
+@keyframes heartExplode {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.3);
+    }
+    100% {
+        transform: scale(0.8);
+    }
+}
+
+@keyframes flyAway {
+    0% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(calc(-50% + var(--tx)), calc(-50% + var(--ty))) scale(0);
+    }
+}
+
+/* --- 2. البانر العلوي --- */
+.top-banner-promo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    z-index: 9998;
+    transform: translateY(-100%);
+    transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.top-banner-promo.show {
+    transform: translateY(0);
+}
+
+.banner-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 15px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.banner-icon {
+    font-size: 32px;
+    color: white;
+    animation: rotate360 3s linear infinite;
+}
+
+.banner-text {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    color: white;
+}
+
+.banner-text strong {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.banner-text span {
+    font-size: 14px;
+    opacity: 0.95;
+}
+
+.banner-btn {
+    background: white;
+    color: #667eea;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.banner-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.banner-close {
+    position: absolute;
+    left: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: white;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner-close:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: rotate(90deg);
+}
+
+@keyframes rotate360 {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* --- 3. الزر الجانبي العائم --- */
+.floating-side-btn {
+    position: fixed;
+    left: 20px;
+    bottom: 100px;
+    z-index: 9997;
+    cursor: pointer;
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: all 0.4s ease;
+}
+
+.floating-side-btn.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.side-btn-content {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    padding: 15px;
+    border-radius: 50px 50px 50px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 8px 25px rgba(245, 87, 108, 0.5);
+    transition: all 0.3s ease;
+}
+
+.floating-side-btn:hover .side-btn-content {
+    transform: scale(1.1);
+    box-shadow: 0 12px 35px rgba(245, 87, 108, 0.7);
+}
+
+.side-btn-content i {
+    font-size: 28px;
+    color: white;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.side-btn-content span {
+    font-size: 14px;
+    font-weight: 700;
+    color: white;
+}
+
+.side-btn-tooltip {
+    position: absolute;
+    right: -160px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.floating-side-btn:hover .side-btn-tooltip {
+    opacity: 1;
+    right: -170px;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.15);
+    }
+}
+
+/* --- 4. بطاقات البحث الترويجية --- */
+.search-promo-card {
+    cursor: pointer;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.search-promo-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+}
+
+.search-promo-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 30px 20px;
+    height: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+.search-promo-icon {
+    font-size: 60px;
+    color: white;
+    animation: bounce 2s ease-in-out infinite;
+    filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.3));
+}
+
+.search-promo-title {
+    font-size: 20px;
+    font-weight: 800;
+    color: white;
+    text-align: center;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    margin: 0;
+}
+
+.search-promo-desc {
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.95);
+    text-align: center;
+    font-weight: 500;
+    margin: 0;
+}
+
+.search-promo-btn {
+    background: white;
+    color: #333;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 14px;
+    margin-top: 10px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.search-promo-card:hover .search-promo-btn {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.search-promo-shine {
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    animation: shine 3s infinite;
+    pointer-events: none;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes shine {
+    0% {
+        transform: translateX(-100%) translateY(-100%) rotate(45deg);
+    }
+    100% {
+        transform: translateX(100%) translateY(100%) rotate(45deg);
+    }
+}
+
+/* --- 5. نافذة الترحيب --- */
+.welcome-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 0.3s ease;
+}
+
+.welcome-modal {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 30px;
+    padding: 40px;
+    max-width: 500px;
+    width: 90%;
+    position: relative;
+    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.5);
+    animation: modalSlideUp 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.welcome-close {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+.welcome-close:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: rotate(90deg);
+}
+
+.welcome-content {
+    text-align: center;
+    color: white;
+}
+
+.welcome-icon {
+    font-size: 80px;
+    margin-bottom: 20px;
+    animation: rotate360 4s linear infinite;
+}
+
+.welcome-content h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+    font-weight: 800;
+}
+
+.welcome-content > p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    opacity: 0.95;
+}
+
+.welcome-features {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 30px;
+    text-align: right;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 12px 20px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+}
+
+.feature-item i {
+    font-size: 20px;
+    color: #4ade80;
+}
+
+.feature-item span {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.welcome-btn {
+    background: white;
+    color: #667eea;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.welcome-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+.welcome-skip {
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.welcome-skip:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes modalSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px) scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* --- 6. الشريط المتحرك --- */
+.scrolling-banner-promo {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(90deg, #f093fb 0%, #f5576c 50%, #f093fb 100%);
+    padding: 12px 0;
+    z-index: 9996;
+    cursor: pointer;
+    overflow: hidden;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.scrolling-content {
+    display: flex;
+    white-space: nowrap;
+    animation: scroll 30s linear infinite;
+}
+
+.scroll-item {
+    display: inline-block;
+    padding: 0 40px;
+    color: white;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* --- تصميم متجاوب --- */
+@media (max-width: 768px) {
+    .heart-promo-content {
+        padding: 15px 20px;
+        gap: 10px;
+    }
+    
+    .heart-icon {
+        font-size: 32px;
+    }
+    
+    .heart-title {
+        font-size: 16px;
+    }
+    
+    .heart-subtitle {
+        font-size: 12px;
+    }
+    
+    .banner-content {
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 12px 15px;
+    }
+    
+    .banner-text strong {
+        font-size: 16px;
+    }
+    
+    .banner-text span {
+        font-size: 12px;
+    }
+    
+    .banner-btn {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+    
+    .floating-side-btn {
+        left: 10px;
+        bottom: 80px;
+    }
+    
+    .side-btn-content {
+        padding: 12px;
+    }
+    
+    .side-btn-content i {
+        font-size: 24px;
+    }
+    
+    .side-btn-content span {
+        font-size: 12px;
+    }
+    
+    .welcome-modal {
+        padding: 30px 20px;
+    }
+    
+    .welcome-icon {
+        font-size: 60px;
+    }
+    
+    .welcome-content h2 {
+        font-size: 24px;
+    }
+    
+    .welcome-content > p {
+        font-size: 16px;
+    }
+    
+    .search-promo-icon {
+        font-size: 50px;
+    }
+    
+    .search-promo-title {
+        font-size: 18px;
+    }
+    
+    .search-promo-desc {
+        font-size: 14px;
+    }
+    
+    .scroll-item {
+        font-size: 14px;
+        padding: 0 30px;
+    }
+}
+
+/* --- تأثيرات إضافية --- */
+@keyframes glow {
+    0%, 100% {
+        filter: drop-shadow(0 0 10px rgba(230, 0, 35, 0.6));
+    }
+    50% {
+        filter: drop-shadow(0 0 25px rgba(230, 0, 35, 0.9));
+    }
+}
+
+.promo-glow {
+    animation: glow 2s ease-in-out infinite;
+}
