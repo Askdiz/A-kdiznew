@@ -834,7 +834,7 @@ function initPromotions() {
     
     // الشريط المتحرك (اختياري)
     scrollingBanner = new ScrollingBanner();
-    // scrollingBanner.show(); // يمكن تفعيله عند الحاجة
+    scrollingBanner.show(); // يمكن تفعيله عند الحاجة
     
     console.log('✅ نظام الترويجات جاهز!');
 }
