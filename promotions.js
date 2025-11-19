@@ -86,7 +86,7 @@ class FloatingHeartPromo {
         // بدء العرض بعد 3 ثوانٍ من تحميل الصفحة
         setTimeout(() => {
             this.startRandomShow();
-        }, 10000);
+        }, 50000);
     }
 
     createHeart() {
@@ -834,8 +834,18 @@ function initPromotions() {
     
     // الشريط المتحرك (اختياري)
     scrollingBanner = new ScrollingBanner();
-    scrollingBanner.init();
-    scrollingBanner.show(); // يمكن تفعيله عند الحاجة
+scrollingBanner.init();
+
+// تشغيل أول مرة
+scrollingBanner.show();
+
+// كل 60 ثانية: يظهر ثم بعد 60 ثانية يختفي
+setInterval(() => {
+    scrollingBanner.show(); // يظهر الشريط
+    setTimeout(() => {
+        scrollingBanner.hide(); // بعد دقيقة يختفي
+    }, 60000); // 60000ms = 1 دقيقة
+}, 120000); // كل دورتين: دقيقة ظهور + دقيقة اختفاء // يمكن تفعيله عند الحاجة
     
     console.log('✅ نظام الترويجات جاهز!');
 }
