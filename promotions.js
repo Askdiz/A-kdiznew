@@ -86,7 +86,7 @@ class FloatingHeartPromo {
         // بدء العرض بعد 3 ثوانٍ من تحميل الصفحة
         setTimeout(() => {
             this.startRandomShow();
-        }, 100000);
+        }, 1000000);
     }
 
     createHeart() {
@@ -102,9 +102,9 @@ class FloatingHeartPromo {
                     <span class="heart-subtitle">انقر هنا!</span>
                 </div>
                 <div class="heart-sparkles">
-                    <span>✨</span>
-                    <span>✨</span>
-                    <span>✨</span>
+                    <span>❤️‍🩹</span>
+                    <span>❤️‍🩹</span>
+                    <span>❤️‍🩹</span>
                 </div>
             </div>
         `;
@@ -139,7 +139,7 @@ class FloatingHeartPromo {
         // إضافة كلاس للظهور بعد فترة قصيرة
         setTimeout(() => {
             this.heartElement.classList.add('show');
-        }, 100);
+        }, 10000);
 
         // إخفاء تلقائي
         setTimeout(() => {
@@ -396,7 +396,7 @@ class WelcomeModal {
                     <div class="welcome-icon">
                         <i class="fas fa-gift"></i>
                     </div>
-                    <h2>مرحباً بك! 🎉</h2>
+                    <h2>مرحباً بك! ❤️‍🔥</h2>
                     <p>هل تعلم أن لدينا موقع مخصص للأفلام؟</p>
                     <div class="welcome-features">
                         <div class="feature-item">
