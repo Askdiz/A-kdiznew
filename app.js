@@ -672,7 +672,7 @@ function playMainPlayer() {
     nextBtn.disabled = videoInfo.episodeNum >= series.episodes.length;
 
     // بناء رابط التضمين الجديد
-    const embedUrl = `https://askdiz-video-vault-23702.lovable.app/embed/${videoInfo.videoId}`;
+    const embedUrl = `https://asktuobdz.lovable.app/embed/${videoInfo.videoId}`;
 
     // عرض وصف الحلقة
     let descriptionHTML = '';
