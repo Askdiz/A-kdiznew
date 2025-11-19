@@ -747,3 +747,15 @@
 .promo-glow {
     animation: glow 2s ease-in-out infinite;
 }
+
+
+/* === FIX: Make PreRoll 'Discover Now' button clickable === */
+.preroll-cta-btn {
+    position: relative !important;
+    z-index: 999999 !important;
+    pointer-events: auto !important;
+}
+
+.preroll-promo-content * {
+    pointer-events: auto !important;
+}

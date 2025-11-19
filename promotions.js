@@ -86,7 +86,7 @@ class FloatingHeartPromo {
         // بدء العرض بعد 3 ثوانٍ من تحميل الصفحة
         setTimeout(() => {
             this.startRandomShow();
-        }, 10000);
+        }, 100000);
     }
 
     createHeart() {
