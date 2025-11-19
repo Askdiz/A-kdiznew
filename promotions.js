@@ -8,19 +8,19 @@ const PROMO_LINKS = {
     main: 'https://asktuobdz.lovable.app/',
     
     // روابط مواقع إضافية (يمكن تعديلها)
-    movies: 'https://askdiz-video-vault-23702.lovable.app/',
+    movies: 'https://asktuobdz.lovable.app/',
     special: 'https://asktuobdz.lovable.app/',
     secondary: 'https://asktuobdz.lovable.app/',
     
     // روابط ترويجات المشغلات
     preRoll: 'https://asktuobdz.lovable.app/',      // قبل بدء التشغيل
-    midRoll: 'https://askdiz-video-vault-23702.lovable.app/',      // أثناء المشاهدة
+    midRoll: 'https://asktuobdz.lovable.app/',      // أثناء المشاهدة
     postRoll: 'https://asktuobdz.lovable.app/',     // بعد الانتهاء
-    playerOverlay: 'https://askdiz-video-vault-23702.lovable.app/', // شريط المشغل
+    playerOverlay: 'https://asktuobdz.lovable.app/', // شريط المشغل
     
     // روابط إضافية
     floating: 'https://asktuobdz.lovable.app/',     // القلب العائم
-    banner: 'https://askdiz-video-vault-23702.lovable.app/',       // البانر العلوي
+    banner: 'https://asktuobdz.lovable.app/',       // البانر العلوي
     sideButton: 'https://asktuobdz.lovable.app/',   // الزر الجانبي
 };
 
@@ -48,7 +48,7 @@ const PROMO_SETTINGS = {
             enabled: true,
             skipAfter: 5, // يمكن التخطي بعد 5 ثوانٍ
             showEveryNPlays: 2, // يظهر كل مشاهدتين
-            imageUrl: 'https://wulaopnlopmcwfdritjj.supabase.co/storage/v1/object/public/images/2253b6c9-dc6e-4aed-881b-2e787bafd0b2/1763532368483_lw61t7.png', // رابط الصورة الترويجية
+            imageUrl: 'https://asktuobdz.lovable.app/', // رابط الصورة الترويجية
             title: 'اكتشف عالم الترفيه',
             description: 'آلاف الأفلام والمسلسلات بانتظارك'
         },
