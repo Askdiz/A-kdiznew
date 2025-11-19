@@ -86,7 +86,7 @@ class FloatingHeartPromo {
         // بدء العرض بعد 3 ثوانٍ من تحميل الصفحة
         setTimeout(() => {
             this.startRandomShow();
-        }, 1000);
+        }, 10000);
     }
 
     createHeart() {
@@ -834,6 +834,7 @@ function initPromotions() {
     
     // الشريط المتحرك (اختياري)
     scrollingBanner = new ScrollingBanner();
+    scrollingBanner.init();
     scrollingBanner.show(); // يمكن تفعيله عند الحاجة
     
     console.log('✅ نظام الترويجات جاهز!');
